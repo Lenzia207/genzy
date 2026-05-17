@@ -41,12 +41,12 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
       />
 
       {/* Portfolio Section */}
-      <PortfolioSection
+      {/* <PortfolioSection
         title={data.portfolio_section.title}
         description={data.portfolio_section.description}
         categories={data.portfolio_section.categories}
         projects={data.portfolio_section.projects}
-      />
+      /> */}
 
       {/* Dashboard: Tech Stack + About Me */}
       <div className="max-w-6xl mx-auto px-6">
