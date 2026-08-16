@@ -34,19 +34,19 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
       />
 
       {/* Pricing */}
-      <PricePackages
+      {/* <PricePackages
         title={data.price_packages_section.title}
         btnText={data.price_packages_section.btnText}
         packages={data.price_packages_section.packages}
-      />
+      /> */}
 
       {/* Portfolio Section */}
-      <PortfolioSection
+      {/* <PortfolioSection
         title={data.portfolio_section.title}
         description={data.portfolio_section.description}
         categories={data.portfolio_section.categories}
         projects={data.portfolio_section.projects}
-      />
+      /> */}
 
       {/* Dashboard: Tech Stack + About Me */}
       <section id="about" className="section-padding">
