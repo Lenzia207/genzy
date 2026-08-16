@@ -3,20 +3,19 @@ interface TechStackSectionProps {
   stacks: { category: string; items: string[] }[];
 }
 
-export default function TechStackSection({ stacks }: TechStackSectionProps) {
+export default function TechStackSection({ title, stacks }: TechStackSectionProps) {
   return (
     <div className="glass-panel" style={{ padding: "3rem" }}>
       <h3
         style={{
-          fontSize: "2rem",
-          fontWeight: 700,
+          fontSize: "1.5rem",
+          fontWeight: 500,
           letterSpacing: "-0.02em",
           marginBottom: "2rem",
           color: "var(--text-100)",
         }}
       >
-        System{" "}
-        <span style={{ color: "var(--text-400)" }}>Specs</span>
+        {title}
       </h3>
 
       {stacks.map((stack, index) => (
@@ -30,7 +29,7 @@ export default function TechStackSection({ stacks }: TechStackSectionProps) {
               letterSpacing: "0.1em",
             }}
           >
-            // {stack.category}
+            {stack.category}
           </h4>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
             {stack.items.map((item, i) => (

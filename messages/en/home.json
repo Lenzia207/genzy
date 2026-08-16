@@ -1,28 +1,23 @@
 {
   "main_navigation": [
     {
-      "name": "Services",
       "page": "/",
+      "name": "Services",
       "pageId": "#services"
     },
     {
-      "name": "Workflow",
       "page": "/",
-      "pageId": "#projectPhases"
+      "name": "Packages",
+      "pageId": "#pricing"
     },
     {
-      "name": "Projects",
       "page": "/",
+      "name": "Projects",
       "pageId": "#projects"
     },
     {
-      "name": "About",
       "page": "/",
-      "pageId": "#about"
-    },
-    {
       "name": "Contact",
-      "page": "/",
       "pageId": "#contact"
     }
   ],
@@ -30,116 +25,106 @@
     "title_line1": "Custom Software Development for Your Vision.",
     "description": "As a freelancer, I build websites and mobile apps that align with your requirements and suit your business.",
     "btn_text": "Get in Touch",
-    "view_more": "View Work"
-  },
-  "service_section": {
-    "title": "How I Can Help",
-    "description": "Good development starts before the first line of code. With my tech stack, I build digital products with thoughtful concepts, clean architecture, and maintainable code that stands the test of time.",
-    "btnText": "Request Service",
-    "services": [
-      {
-        "title": "Development as an Extension of Your Team",
-        "description": "An ongoing project and need for support? After a brief handover, I jump in, work independently, and deliver a clean pull request on time.",
-        "icon_images": {
-          "icon": "Users",
-          "icon_color": "#a78bfa",
-          "icon_animation": "/animations/team-anim.json"
-        }
-      },
-       {
-        "title": "Design to Code",
-        "description": "Have a finished design or Figma file? I translate it into a fast, responsive website or mobile app with precision.",
-        "icon_images": {
-          "icon": "Layers",
-          "icon_color": "#f472b6",
-          "icon_animation": "/animations/layer-anim.json"
-        }
-      },
-      {
-        "title": "Custom Software Development from Scratch",
-        "description": "No digital product yet, but a clear vision? I build websites and mobile apps from design and development to go-live. With clean architecture, maintainable and extendable code, and a user experience that feels natural.",
-        "icon_images": {
-          "icon": "Code2",
-          "icon_color": "#60a5fa",
-          "icon_animation": "/animations/code-anim.json"
-        }
-      },
-     
-      {
-        "title": "Feature Development & Integration",
-        "description": "New features for an existing codebase? I integrate into ongoing projects and deliver production-ready features — from forms, APIs, and authentication to dashboards, payment systems, and interactive animations.",
-        "icon_images": {
-          "icon": "MousePointerClick",
-          "icon_color": "#22d3ee",
-          "icon_animation": "/animations/click-anim.json"
-        }
-      },
-      {
-        "title": "Website and App Redesign",
-        "description": "An outdated website or app costs more than it brings in. I revamp existing projects into individual, stylish designs that reflect your brand.",
-        "icon_images": {
-          "icon": "PenTool",
-          "icon_color": "#fb923c",
-          "icon_animation": "/animations/pentool-anim.json"
-        }
-      }
+    "view_more": "View My Work",
+    "stats": [
+      { "value": 2, "suffix": "", "label": "Years of Agency Experience" },
+      { "value": 100000, "suffix": "+", "label": "Active Users in Apps I've Worked On" },
+      { "value": 5, "suffix": "", "label": "Projects in Portfolio" }
     ]
   },
-  "project_phases_section": {
-    "title": "From Idea to Launch",
-    "description": "Every project follows a clear structure — from the first inquiry to go-live. Transparent communication, defined milestones, and clean handoffs are not extras, they are standard.",
-    "btnText": "Send Inquiry",
-    "phases": [
-      {
-        "name": "Inquiry",
-        "description": "Every great project starts with a no-obligation initial conversation.",
-        "details": [
-          "You reach out with your idea or a short project brief",
-          "We discuss goals, scope, and budget — by call, video, or in person",
-          "You get honest feedback and a clear assessment of the scope",
-          "You receive a tailored proposal"
-        ]
-      },
-      {
-        "name": "Concept",
-        "description": "Structure before style. A solid concept lays the foundation — from the first wireframe to the final line of code.",
-        "details": [
-          "Information architecture and user flows are mapped out",
-          "Wireframes and rough layout concepts are sketched, if no design exists yet",
-          "Technical architecture and stack decisions are finalized",
-          "You receive a clear project roadmap with a realistic timeline"
-        ]
-      },
-      {
-        "name": "Design",
-        "description": "Your vision takes visual shape. Every screen and component is crafted with purpose and your brand in mind.",
-        "details": [
-          "High-fidelity mockups are created in Figma",
-          "You review and provide feedback in defined rounds",
-          "Responsive layouts for mobile, tablet, and desktop",
-          "Final design is approved before development begins"
-        ]
-      },
-      {
-        "name": "Development",
-        "description": "Clean code meets pixel-perfect execution. Built with performance, maintainability, and scalability at its core.",
-        "details": [
-          "Component-based development with modern frameworks (Next.js, React, Flutter)",
-          "Regular progress updates and demo previews keep you in the loop",
-          "Cross-browser and cross-device testing throughout the build",
-          "Code is documented, structured, and ready for handoff"
-        ]
-      },
-      {
-        "name": "Launch",
-        "description": "Your product is ready for the world. A smooth, structured go-live — with everything properly in place.",
-        "details": [
-          "Final quality assurance and bug fixing before launch",
-          "Deployment (Vercel, Cloudflare, or your own server)",
-          "Domain setup, SSL, and performance optimization",
-          "Post-launch support to make sure everything runs smoothly"
-        ]
-      }
+  "angebot_section": {
+    "title": "A Quick Overview of My Services",
+    "description": "Good development starts before the first line of code. With my tech stack, I build digital products with thoughtful concepts, clean architecture, and maintainable code that stands the test of time. For each area you can see the services and the matching project process.",
+    "areas": [
+    {
+      "id": "agenturen",
+      "badge": "Area 01",
+      "title": "Working with Agencies",
+      "servicesLabel": "Services",
+      "processLabel": "Process",
+      "linkLabel": "Learn More",
+      "link": "angebot-agenturen",
+      "services": [
+        "Development as an extension of your team",
+        "Design to code – pixel-perfect implementation of existing Figma files",
+        "Feature development & integrations in ongoing projects",
+        "Clean, documented pull requests and on-time handoffs"
+      ],
+      "process": [
+        { "step": "01", "title": "Inquiry", "description": "Short briefing on project, stack, scope, and timeline." },
+        { "step": "02", "title": "Handoff", "description": "Access, a walkthrough of the codebase, and a clear definition of done." },
+        { "step": "03", "title": "Execution", "description": "Independent work on tickets, with regular updates." },
+        { "step": "04", "title": "Review", "description": "Clean pull request, documented and delivered on time." }
+      ]
+    },
+    {
+      "id": "webseiten",
+      "badge": "Area 02",
+      "title": "Websites",
+      "servicesLabel": "Services",
+      "processLabel": "Process",
+      "linkLabel": "Learn More",
+      "link": "angebot-webseiten",
+      "services": [
+        "Design to code",
+        "Custom software development from scratch",
+        "Feature development & integrations",
+        "Website redesign"
+      ],
+      "process": [
+        { "step": "01", "title": "Inquiry", "description": "No-obligation initial conversation about goals, scope, and budget." },
+        { "step": "02", "title": "Concept", "description": "Information architecture, user flows, and a roadmap with a realistic timeline." },
+        { "step": "03", "title": "Design", "description": "High-fidelity mockups in Figma, feedback in defined rounds." },
+        { "step": "04", "title": "Development", "description": "Component-based implementation with Next.js, tested across browsers and devices." },
+        { "step": "05", "title": "Launch", "description": "Deployment, domain setup, SSL, and performance optimization." }
+      ]
+    },
+    {
+      "id": "mobile-apps",
+      "badge": "Area 03",
+      "title": "Mobile Apps",
+      "servicesLabel": "Services",
+      "processLabel": "Process",
+      "linkLabel": "Learn More",
+      "link": "angebot-mobile-apps",
+      "services": [
+        "Custom software development from scratch",
+        "Feature development & integrations",
+        "Design to code",
+        "App redesign"
+      ],
+      "process": [
+        { "step": "01", "title": "Inquiry", "description": "Initial conversation about platforms, feature scope, and budget." },
+        { "step": "02", "title": "Concept", "description": "User flows, navigation structure, and technical architecture." },
+        { "step": "03", "title": "Design", "description": "Screens and components for iOS and Android, in defined feedback rounds." },
+        { "step": "04", "title": "Development", "description": "Implementation in Flutter, with beta builds for early feedback." },
+        { "step": "05", "title": "Store Release", "description": "Submission to the App Store and Play Store, including store assets." }
+      ]
+    },
+    {
+      "id": "seo-geo",
+      "badge": "Area 04",
+      "title": "SEO and GEO",
+      "servicesLabel": "Services",
+      "processLabel": "Process",
+      "linkLabel": "Learn More",
+      "link": "angebot-seo-geo",
+      "services": [
+        "Technical SEO: Core Web Vitals, indexing, crawling",
+        "Keyword and competitor research",
+        "On-page optimization: page structure, meta tags, internal linking",
+        "Structured data (Schema.org) for rich results",
+        "Local SEO: Google Business Profile and consistent location data",
+        "GEO: preparing content and sources for answers in AI search systems",
+        "Monitoring and reporting via Search Console and rankings"
+      ],
+      "process": [
+        { "step": "01", "title": "Audit", "description": "Technical analysis: crawling, indexing, and Core Web Vitals." },
+        { "step": "02", "title": "Analysis", "description": "Keyword and competitor research aligned with search intent." },
+        { "step": "03", "title": "Execution", "description": "Technical SEO, content, metadata, and structured data." },
+        { "step": "04", "title": "Monitoring", "description": "Rankings, Search Console, and visibility in AI answers." }
+      ]
+    }
     ]
   },
   "portfolio_section": {
@@ -251,7 +236,7 @@
     ]
   },
   "about_me_section": {
-    "title": "Hello World",
+    "title": "About Me",
     "name": "Lena Zyadeh, BSc.",
     "description": "I am a freelance web and app developer specializing in React, Next.js, and Flutter.\n\nI started my career at Marqably, a digital agency in Vienna, where I spent two years building and maintaining several digital products — including apps with hundreds of thousands of active users. That experience shaped the standards I hold my work to: clean code, proper documentation, and a working style that doesn't need hand-holding.\n\nNow working independently, I take on projects where both sides matter — a strong sense for design, and the technical depth to execute it properly.",
     "social_media": [
@@ -269,7 +254,7 @@
   },
   "contact_section": {
     "title": "Let's work together.",
-    "description": "Have a project, an idea, or just a question? I'd love to hear from you — for a free initial conversation, online or over a coffee in Vienna.",
+    "description": "Let's bring your ideas to life!\nFeel free to reach out for a free conversation — online or over a coffee in Vienna. We'll figure out together how your project takes shape and what steps get you closer to your goal.",
     "nameLabel": "Name*",
     "namePlaceholder": "Your full name",
     "companyLabel": "Company",
@@ -283,8 +268,15 @@
     "interestWebsite": "Website",
     "interestMobileApp": "Mobile App",
     "interestGeneral": "General Inquiry",
-    "packageLabel": "Select a package",
-    "serviceLabel": "Or select individual services"
+    "serviceLabel": "Select services",
+    "packageLabel": "Or select a website package",
+    "serviceOptions": [
+      "Development as an extension of your team",
+      "Design to code",
+      "Custom software development from scratch",
+      "Feature development & integrations",
+      "Website and app redesign"
+    ]
   },
   "price_packages_section": {
     "title": "Website Packages",

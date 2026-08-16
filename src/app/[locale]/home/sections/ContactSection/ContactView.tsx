@@ -2,7 +2,6 @@ import Checkbox from "@/components/Checkbox";
 import LabelInput from "@/components/LabelInput";
 import { Send } from "lucide-react";
 import { PricePackage } from "../data/types/home-types";
-import type { ServiceSectionType } from "../data/types/home-types";
 import { FormEvent } from "react";
 import ServiceSelection from "./components/ServiceSelection";
 import ToggleButton from "./components/ToggleButton";
@@ -46,7 +45,7 @@ interface ContactViewProps {
     packageLabel: string;
     packages: PricePackage[];
     serviceLabel: string;
-    services: ServiceSectionType["services"];
+    services: string[];
     selectedServices: string[];
     toggleService: (serviceName: string) => void;
     textPrivacyPolicy: string;
@@ -94,24 +93,19 @@ export default function ContactView({ title,
 }: ContactViewProps) {
     return (<section
         id="contact"
-        className="relative section-padding"
-        style={{ borderTop: "1px solid var(--border)" }}
+        className="section-dark relative section-padding"
     >
-        {/* <div className="absolute inset-0 pointer-events-none">
-          <div className="glow-blue" style={{ position: "absolute", bottom: 0, right: "-10%" }} />
-        </div> */}
-
-        <TitleHeader title={title} description={description} />
+        <TitleHeader tag="KONTAKT" title={title} description={description} />
 
         <div className="max-w-7xl mx-auto px-6 reveal-on-scroll">
-            <div className="glass-elevated rounded-sm p-8 md:p-10">
-                <h3 className="text-xl font-medium mb-8" style={{ color: "var(--text-primary)" }}>{btn_text}</h3>
+            <div className="glass-elevated p-8 md:p-10">
+                <h3 className="text-xl font-medium mb-8" style={{ color: "var(--teal)" }}>{btn_text}</h3>
 
                 {submitStatusType && (
                     <div
-                        className={`mb-6 p-4 rounded-xl ${submitStatusType === "success"
-                            ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                            : "bg-red-500/10 border border-red-500/20 text-red-400"
+                        className={`mb-6 p-4 ${submitStatusType === "success"
+                            ? "bg-green-500/10 border border-green-500/30 text-green-700"
+                            : "bg-red-500/10 border border-red-500/30 text-red-700"
                             }`}
                     >
                         {submitStatusMessage}
@@ -207,7 +201,7 @@ export default function ContactView({ title,
                             onChange={handleChange}
                             required
                             rows={4}
-                            className="w-full px-4 py-3 rounded-xl input-dark transition-all resize-none focus:outline-none"
+                            className="w-full px-4 py-3 input-dark transition-all resize-none focus:outline-none"
                             placeholder={messagePlaceholder}
                         ></textarea>
                     </div>
@@ -221,8 +215,7 @@ export default function ContactView({ title,
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full btn btn-primary py-4 mt-4 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-                   
+                        className="w-full btn btn-primary py-4 mt-4 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {isSubmitting ? textSending : btn_text}
                         <Send className="w-4 h-4" />

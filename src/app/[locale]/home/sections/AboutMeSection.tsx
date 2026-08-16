@@ -1,4 +1,10 @@
 import Image from "next/image";
+import IconLucide from "@/components/IconsLucide";
+
+const SOCIAL_ICONS: Record<string, string> = {
+  Github: "Github",
+  LinkedIn: "Linkedin",
+};
 
 interface AboutMeSectionProps {
   title: string;
@@ -25,7 +31,7 @@ export default function AboutMeSection({
   return (
     <div className="glass-panel p-12">
       {/* Avatar */}
-      <div className="relative w-20 h-20 rounded-full bg-(--bg-surface-3) mb-6 overflow-hidden shrink-0">
+      <div className="relative w-20 h-20 bg-(--bg-surface-3) mb-6 overflow-hidden shrink-0">
         <Image
           src="/images/lena-zy-about-me.jpg"
           alt={fullname}
@@ -35,7 +41,7 @@ export default function AboutMeSection({
       </div>
 
       {/* Name */}
-      <h3 className="text-2xl font-bold mb-0.5 text-(--text-100)">
+      <h3 className="text-2xl font-medium mb-6 text-(--text-100)">
         {name}{" "}
         {credential && (
           <span className="label-mono text-[0.8rem] align-middle">
@@ -43,11 +49,6 @@ export default function AboutMeSection({
           </span>
         )}
       </h3>
-
-      {/* Role */}
-      <p className="label-mono text-(--accent-cyan) mb-6">
-        SYS.ADMIN / DEV
-      </p>
 
       {/* Bio */}
       <div className="flex flex-col gap-3">
@@ -67,8 +68,9 @@ export default function AboutMeSection({
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-secondary px-5 py-2 text-sm"
+              className="btn btn-secondary px-5 py-2 text-sm gap-2"
             >
+              <IconLucide iconName={SOCIAL_ICONS[sName] ?? sName} className="w-4 h-4" />
               {sName}
             </a>
           ))}

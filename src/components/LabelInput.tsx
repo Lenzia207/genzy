@@ -24,7 +24,7 @@ export default function LabelInput({
         value={formName}
         onChange={onChange}
         required
-        className="w-full px-4 py-3 rounded-xl input-dark transition-all focus:outline-none"
+        className="w-full px-4 py-3 input-dark transition-all focus:outline-none"
         placeholder={namePlaceholder}
       />
     </div>

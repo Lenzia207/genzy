@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-manrope",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const spaceMono = Space_Mono({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-space-mono",
+  variable: "--font-space-grotesk",
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default function RootLayout({
     // component after hydration; suppress the mismatch warning on <html>.
     <html className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${jakarta.variable} ${spaceMono.variable} font-sans antialiased grain-overlay`}
+        className={`${manrope.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
         {children}
       </body>

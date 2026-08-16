@@ -1,81 +1,61 @@
-import BackgroundEffect from "@/components/BackgroundEffect";
-import HeroCoreSymbol from "./components/HersoCoreSymbol";
-import GridOverlay from "./components/GridOverlay";
+import Image from "next/image";
+import HeroStats from "./components/HeroStats";
+import { HeroStat } from "../data/types/home-types";
 
 interface HeroSectionProps {
   titleLine1: string;
   description: string;
   btnText: string;
   viewMore: string;
+  stats: HeroStat[];
 }
-
-const TECH_STACK = ["React", "Next.js", "Tailwind CSS", "Flutter", "Dart"];
 
 export default function HeroSection({
   titleLine1,
   description,
   btnText,
   viewMore,
+  stats,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden lg:pt-28">
-      <BackgroundEffect />
-      {/* Background Grid overlay */}
-      <GridOverlay />
+    <section id="top" className="section-dark relative overflow-hidden">
+      <div
+        className="absolute top-0 left-0 w-[38vw] h-[38vw] pointer-events-none"
+        style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.12) 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }}
+      />
+      <div
+        className="absolute bottom-0 right-0 w-[38vw] h-[38vw] pointer-events-none"
+        style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.12) 1.5px, transparent 1.5px)", backgroundSize: "24px 24px" }}
+      />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-center">
-
-          {/* Left: Content */}
-          <div className="flex flex-col items-start gap-8">
-            {/* Status pill */}
-            <div className="pill pill-accent animate-enter flex items-center gap-2">
-              <span className="status-dot" />
-              Freelance Developer für Web &amp; Mobile Apps
-            </div>
-
-            {/* Headline */}
-            <h1 className="lg:text-display-1 text-display-2 animate-enter delay-100">
-              {titleLine1.split(" ").map((word, i) => {
-                const isAccent = word.toLowerCase().includes("software") || word.toLowerCase().includes("entwicklung") || word.toLowerCase().includes("development");
-                return (
-                  <span key={i} style={isAccent ? { color: "var(--accent-cyan)" } : {}}>
-                    {word}{" "}
-                  </span>
-                );
-              })}
-            </h1>
-
-            {/* Description */}
-            <p className="animate-enter delay-200 text-lg leading-relaxed max-w-xl" style={{ color: "var(--text-300)" }}>
-              {description}
-            </p>
-
-            {/* CTAs */}
-            <div className="animate-enter delay-300 flex flex-wrap gap-4">
-              <a href="#contact" className="btn btn-primary">
-                {btnText}
-              </a>
-              <a href="#projects" className="btn btn-secondary">
-                {viewMore}
-              </a>
-            </div>
-
-            {/* Tech stack */}
-            <div className="animate-enter delay-400 w-full">
-              <div className="label-mono mb-3">Core Stack //</div>
-              <div className="flex flex-wrap gap-3">
-                {TECH_STACK.map((t) => (
-                  <span key={t} className="pill">{t}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <HeroCoreSymbol />
+      <div className="relative z-10 flex flex-col items-center text-center px-6 pt-36 pb-14">
+        <h1 className="animate-enter font-mono uppercase" style={{ fontSize: "clamp(2.4rem,9vw,6.5rem)", fontWeight: 700, letterSpacing: "0.06em", lineHeight: 1 }}>
+          Lena Zyadeh
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg md:text-xl font-medium animate-enter delay-100" style={{ color: "var(--lime)" }}>
+          {titleLine1}
+        </p>
+        <p className="mt-4 max-w-xl leading-relaxed animate-enter delay-200" style={{ color: "var(--text-300)" }}>
+          {description}
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4 justify-center animate-enter delay-300">
+          <a href="#contact" className="btn btn-primary">{btnText}</a>
+          <a href="#projects" className="btn btn-secondary">{viewMore}</a>
         </div>
       </div>
+
+      <div className="relative z-10 w-full max-w-[520px] mx-auto aspect-4/5 animate-enter delay-400">
+        <Image
+          src="/images/me_transparent.png"
+          alt="Lena Zyadeh"
+          fill
+          priority
+          className="object-cover"
+          sizes="(max-width: 640px) 90vw, 520px"
+        />
+      </div>
+
+      <HeroStats stats={stats} />
     </section>
   );
 }
-

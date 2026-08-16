@@ -2,11 +2,11 @@
 
 import { useState, FormEvent } from "react";
 import ContactView from "./ContactView";
-import { ContactSection as ContactSectionType, PricePackage, ServiceSectionType } from "../data/types/home-types";
+import { ContactSection as ContactSectionType, PricePackage } from "../data/types/home-types";
 
 interface ContactSectionProps {
   contactData: ContactSectionType;
-  services: ServiceSectionType["services"];
+  services: string[];
   packages: PricePackage[];
   locale: string;
 }

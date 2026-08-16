@@ -4,8 +4,7 @@
 export interface HomePageData {
   main_navigation: MainNavigation[];
   hero_section: HeroSection;
-  service_section: ServiceSectionType;
-  project_phases_section: ProjectPhasesSection;
+  angebot_section: AngebotSection;
   portfolio_section: PortfolioSection;
   tech_stack_section: TechStackSection;
   about_me_section: AboutMeSection;
@@ -26,23 +25,16 @@ export interface PricePackagesSection {
   packages: PricePackage[];
 }
 
-export interface ProjectPhase {
-  name: string;
-  description: string;
-  details: string[];
-}
-
-export interface ProjectPhasesSection {
-  title: string;
-  description?: string;
-  btnText: string;
-  phases: ProjectPhase[];
-}
-
 export interface MainNavigation {
   name: string;
   page: string;
   pageId: string;
+}
+
+export interface HeroStat {
+  value: number;
+  suffix: string;
+  label: string;
 }
 
 export interface HeroSection {
@@ -50,20 +42,31 @@ export interface HeroSection {
   description: string;
   btn_text: string;
   view_more: string;
+  stats: HeroStat[];
 }
-export interface ServiceSectionType {
+
+export interface AngebotProcessStep {
+  step: string;
   title: string;
   description: string;
-  services: {
-    title: string;
-    description: string;
-    icon_images: {
-      icon: string;
-      icon_color: string;
-      icon_animation: string;
-    };
-  }[];
-  btnText: string;
+}
+
+export interface AngebotArea {
+  id: string;
+  badge: string;
+  title: string;
+  servicesLabel: string;
+  processLabel: string;
+  linkLabel: string;
+  link: string;
+  services: string[];
+  process: AngebotProcessStep[];
+}
+
+export interface AngebotSection {
+  title: string;
+  description: string;
+  areas: AngebotArea[];
 }
 
 export interface PortfolioSection {
@@ -119,4 +122,5 @@ export interface ContactSection {
   interestGeneral: string;
   packageLabel: string;
   serviceLabel: string;
+  serviceOptions: string[];
 }

@@ -33,43 +33,55 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
   useEffect(() => setItemActive(data, setActiveSection), [data.main_navigation]);
 
   return (
-    <>
-      {/* System Meta Bar — all screen sizes */}
-      <div className="label-mono fixed top-0 left-0 w-full z-50 h-10 flex justify-between items-center px-4 md:px-8 bg-[rgba(11,12,16,0.9)] border-b border-(--border-faint) backdrop-blur-md">
-        <span>SYS.VER // VISION.IT.28</span>
-        <div className="flex items-center gap-4 md:gap-6">
-          <span className="hidden sm:flex items-center gap-2">
-            <span className="status-dot w-1.5 h-1.5 animate-none shadow-none" />
-            {locale === "de" ? "VERFÜGBAR FÜR FREELANCE" : "AVAILABLE FOR FREELANCE"}
-          </span>
-          <SwitchLanguage />
-        </div>
-      </div>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-center gap-3 md:gap-8 px-4 md:px-8 py-4 transition-all duration-300 ${scrolled ? "bg-white shadow-[0_4px_24px_rgba(2,70,75,0.1)]" : "bg-transparent"
+        }`}
+    >
+      {data.main_navigation.slice(0, 2).map((item, index) => {
+        const sectionId = item.pageId.replace("#", "");
+        const isActive = sectionId === activeSection;
 
-      {/* Floating Pill Nav — desktop only (mobile uses BottomNavigation) */}
-      <nav
-        className={`hidden md:flex fixed z-40 top-11 left-1/2 -translate-x-1/2 items-center gap-1 p-1.5 mt-4 rounded-full bg-[rgba(26,29,39,0.75)] border border-white/10 backdrop-blur-xl transition-all duration-300 ${scrolled ? "shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "shadow-none"
-          }`}
+        return (
+          <button
+            key={index}
+            type="button"
+            className="hidden sm:block font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors"
+            style={{ color: isActive ? "var(--lime-hover)" : scrolled ? "var(--text-100)" : "#FFFFFF" }}
+            onClick={() => navigateToSection(sectionId)}
+          >
+            {item.name}
+          </button>
+        );
+      })}
+
+      <button
+        type="button"
+        aria-label={locale === "de" ? "Nach oben" : "Back to top"}
+        onClick={() => navigateToSection("top")}
+        className="flex items-center justify-center w-9 h-9 rotate-45 shrink-0"
+        style={{ background: "var(--lime)" }}
       >
-        {data.main_navigation.map((item, index) => {
-          const sectionId = item.pageId.replace("#", "");
-          const isActive = sectionId === activeSection;
+        <span className="-rotate-45 font-mono font-bold text-xs" style={{ color: "var(--teal)" }}>VI</span>
+      </button>
 
-          return (
-            <button
-              key={index}
-              type="button"
-              className={`text-sm font-medium rounded-full px-4 py-2 transition-all duration-300 ${isActive
-                  ? "text-white bg-(--accent-purple) shadow-[0_0_16px_rgba(139,92,246,0.4)]"
-                  : "text-(--text-300) bg-transparent hover:text-(--text-100) hover:bg-(--bg-surface-3)"
-                }`}
-              onClick={() => navigateToSection(sectionId)}
-            >
-              {item.name}
-            </button>
-          );
-        })}
-      </nav>
-    </>
+      {data.main_navigation.slice(2).map((item, index) => {
+        const sectionId = item.pageId.replace("#", "");
+        const isActive = sectionId === activeSection;
+
+        return (
+          <button
+            key={index}
+            type="button"
+            className="hidden sm:block font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors"
+            style={{ color: isActive ? "var(--lime-hover)" : scrolled ? "var(--text-100)" : "#FFFFFF" }}
+            onClick={() => navigateToSection(sectionId)}
+          >
+            {item.name}
+          </button>
+        );
+      })}
+
+      <SwitchLanguage />
+    </nav>
   );
 }

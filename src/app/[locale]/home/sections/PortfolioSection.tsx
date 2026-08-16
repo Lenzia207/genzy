@@ -23,9 +23,9 @@ function getProjectStatus(title: string): { label: string; cyan: boolean } {
 
 export default function PortfolioSection({ title, projects }: PortfolioSectionProps) {
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-dark section-padding">
       <div className="max-w-6xl mx-auto px-6">
-        <TitleHeader title={title} tag="[ WORK_LOG ]" />
+        <TitleHeader title={title} tag="PROJEKTE" />
 
         <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-8">
           {projects.map((project, index) => {

@@ -2,23 +2,18 @@
   "main_navigation": [
     {
       "page": "/",
-      "name": "Leistungen",
+      "name": "Angebot",
       "pageId": "#services"
     },
     {
       "page": "/",
-      "name": "Ablauf",
-      "pageId": "#projectPhases"
+      "name": "Pakete",
+      "pageId": "#pricing"
     },
     {
       "page": "/",
       "name": "Projekte",
       "pageId": "#projects"
-    },
-    {
-      "page": "/",
-      "name": "About",
-      "pageId": "#about"
     },
     {
       "page": "/",
@@ -30,116 +25,106 @@
     "title_line1": "Individuelle Softwareentwicklung für deine Vision.",
     "description": "Als Freelancer entwickle ich Websites und mobile Apps, die sich nach deinen Anforderungen richten und deinem Unternehmen entsprechen.",
     "btn_text": "Kontakt aufnehmen",
-    "view_more": "Meine Referenzen"
+    "view_more": "Meine Referenzen",
+    "stats": [
+      { "value": 2, "suffix": "", "label": "Jahre Agenturerfahrung" },
+      { "value": 100000, "suffix": "+", "label": "Aktive Nutzer in betreuten Apps" },
+      { "value": 5, "suffix": "", "label": "Projekte im Portfolio" }
+    ]
   },
-  "service_section": {
-    "title": "Wie ich helfen kann",
-    "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt.",
-    "services": [
-      {
-        "title": "Entwicklung als Erweiterung deines Teams",
-        "description": "Ein laufendes Projekt und Bedarf nach Unterstützung? Nach einer kurzen Übergabe steige ich ein, arbeite eigenständig und stelle termintreu einen sauberen Pull Request.",
-        "icon_images": {
-          "icon": "Users",
-          "icon_color": "#a78bfa",
-          "icon_animation": "/animations/team-anim.json"
-        }
-      },
-        {
-        "title": "Design zu Code",
-        "description": "Ein fertiges Design oder Figma-File ist vorhanden? Ich setze es pixel-genau in eine schnelle, responsive Webanwendung oder mobile App um.",
-        "icon_images": {
-          "icon": "Layers",
-          "icon_color": "#f472b6",
-          "icon_animation": "/animations/layer-anim.json"
-        }
-      },
-      {
-        "title": "Individuelle Softwareentwicklung von Grund auf",
-        "description": "Noch kein digitales Produkt, aber eine klare Vorstellung? Ich entwickle Websites und mobile Apps von Design und Entwicklung bis zum Go-Live. Mit sauberer Architektur, wartbarem und erweiterbarem Code und einer Nutzererfahrung, die sich natürlich anfühlt.",
-        "icon_images": {
-          "icon": "Code2",
-          "icon_color": "#60a5fa",
-          "icon_animation": "/animations/code-anim.json"
-        }
-      },
-    
-      {
-        "title": "Feature-Entwicklung & Integrationen",
-        "description": "Neue Funktionen für eine bestehende Codebase? Ich integriere mich in laufende Projekte und liefere Features, die produktionsreif sind. Beginnend bei Formularen, APIs und Authentifizierung bis hin zu Dashboards, Zahlungssystemen und interaktiven Animationen.",
-        "icon_images": {
-          "icon": "MousePointerClick",
-          "icon_color": "#22d3ee",
-          "icon_animation": "/animations/click-anim.json"
-        }
-      },
-      {
-        "title": "Website und App Redesign",
-        "description": "Eine veraltete Website oder App kostet mehr als sie bringt. Ich überarbeite bestehende Projekte in individuelle, stilvolle Designs um, die deiner Marke wieder gerecht werden.",
-        "icon_images": {
-          "icon": "PenTool",
-          "icon_color": "#fb923c",
-          "icon_animation": "/animations/pentool-anim.json"
-        }
-      }
-    ],
-    "btnText": "Jetzt anfragen"
-  },
-  "project_phases_section": {
-    "title": "Von der Anfrage zum Launch",
-    "description": "Jedes Projekt folgt einer klaren Struktur – von der ersten Anfrage bis zum Go-Live. Transparente Kommunikation, definierte Meilensteine und saubere Übergaben sind dabei kein Extra, sondern Standard.",
-    "btnText": "Anfrage schicken",
-    "phases": [
-      {
-        "name": "Anfrage",
-        "description": "Jedes gute Projekt beginnt mit einem unverbindlichen Erstgespräch.",
-        "details": [
-          "Du meldest dich mit deiner Idee oder einem kurzen Projektbrief",
-          "Wir besprechen Ziele, Umfang und Budget – telefonisch, per Video oder vor Ort",
-          "Du bekommst ehrliches Feedback und eine klare Einschätzung des Aufwands",
-          "Du erhältst ein maßgeschneidertes Angebot"
-        ]
-      },
-      {
-        "name": "Konzept",
-        "description": "Struktur vor Stil. Ein solides Konzept legt das Fundament – vom ersten Wireframe bis zur letzten Codezeile.",
-        "details": [
-          "Informationsarchitektur und User Flows werden ausgearbeitet",
-          "Wireframes und grobe Layout-Konzepte werden skizziert, sofern kein Design vorliegt",
-          "Technische Architektur und Stack-Entscheidungen werden finalisiert",
-          "Du erhältst eine klare Projekt-Roadmap mit realistischem Zeitplan"
-        ]
-      },
-      {
-        "name": "Design",
-        "description": "Deine Vision nimmt visuelle Form an. Jeder Screen und jede Komponente wird mit Sorgfalt und deiner Marke im Fokus gestaltet.",
-        "details": [
-          "High-Fidelity-Mockups werden in Figma erstellt",
-          "Du reviewst und gibst Feedback in definierten Runden",
-          "Responsive Layouts für Mobil, Tablet und Desktop",
-          "Das finale Design erhält deine Freigabe vor Entwicklungsstart"
-        ]
-      },
-      {
-        "name": "Entwicklung",
-        "description": "Sauberer Code trifft pixel-genaue Umsetzung. Gebaut mit Fokus auf Performance, Wartbarkeit und Skalierbarkeit.",
-        "details": [
-          "Komponentenbasierte Entwicklung mit modernen Frameworks (Next.js, Flutter)",
-          "Regelmäßige Updates und Demo-Previews halten dich auf dem Laufenden",
-          "Browser- und geräteübergreifende Tests während der gesamten Entwicklung",
-          "Code ist dokumentiert, strukturiert und übergabebereit"
-        ]
-      },
-      {
-        "name": "Launch",
-        "description": "Dein Produkt ist bereit für die Welt. Ein reibungsloser, strukturierter Go-Live – mit allem an seinem Platz.",
-        "details": [
-          "Finale Qualitätssicherung und Bugfixing vor dem Launch",
-          "Deployment (Vercel, Cloudflare oder eigener Server)",
-          "Domain-Einrichtung, SSL und Performance-Optimierung",
-          "Support nach dem Launch – damit alles reibungslos läuft"
-        ]
-      }
+  "angebot_section": {
+    "title": "Mein Angebot im Überblick",
+    "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt. Pro Bereich siehst du die Leistungen und den passenden Projektablauf.",
+    "areas": [
+    {
+      "id": "agenturen",
+      "badge": "Bereich 01",
+      "title": "Zusammenarbeit mit Agenturen",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-agenturen",
+      "services": [
+        "Entwicklung als Erweiterung deines Teams",
+        "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
+        "Feature-Entwicklung & Integrationen in laufenden Projekten",
+        "Sauberer, dokumentierter Pull Request und termintreue Übergabe"
+      ],
+      "process": [
+        { "step": "01", "title": "Anfrage", "description": "Kurzes Briefing zu Projekt, Stack, Umfang und Zeitrahmen." },
+        { "step": "02", "title": "Übergabe", "description": "Zugänge, Walkthrough der Codebase und eine klare Definition of Done." },
+        { "step": "03", "title": "Umsetzung", "description": "Eigenständige Arbeit an den Tickets, mit regelmäßigen Updates." },
+        { "step": "04", "title": "Review", "description": "Sauberer Pull Request, dokumentiert und termintreu abgeliefert." }
+      ]
+    },
+    {
+      "id": "webseiten",
+      "badge": "Bereich 02",
+      "title": "Webseiten",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-webseiten",
+      "services": [
+        "Design zu Code",
+        "Individuelle Softwareentwicklung von Grund auf",
+        "Feature-Entwicklung & Integrationen",
+        "Website Redesign"
+      ],
+      "process": [
+        { "step": "01", "title": "Anfrage", "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget." },
+        { "step": "02", "title": "Konzept", "description": "Informationsarchitektur, User Flows und eine Roadmap mit realistischem Zeitplan." },
+        { "step": "03", "title": "Design", "description": "High-Fidelity-Mockups in Figma, Feedback in definierten Runden." },
+        { "step": "04", "title": "Entwicklung", "description": "Komponentenbasierte Umsetzung mit Next.js, getestet über Browser und Geräte." },
+        { "step": "05", "title": "Launch", "description": "Deployment, Domain-Einrichtung, SSL und Performance-Optimierung." }
+      ]
+    },
+    {
+      "id": "mobile-apps",
+      "badge": "Bereich 03",
+      "title": "Mobile Apps",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-mobile-apps",
+      "services": [
+        "Individuelle Softwareentwicklung von Grund auf",
+        "Feature-Entwicklung & Integrationen",
+        "Design zu Code",
+        "App Redesign"
+      ],
+      "process": [
+        { "step": "01", "title": "Anfrage", "description": "Erstgespräch zu Plattformen, Funktionsumfang und Budget." },
+        { "step": "02", "title": "Konzept", "description": "User Flows, Navigationsstruktur und technische Architektur." },
+        { "step": "03", "title": "Design", "description": "Screens und Komponenten für iOS und Android, in definierten Feedback-Runden." },
+        { "step": "04", "title": "Entwicklung", "description": "Umsetzung in Flutter, mit Beta-Builds für frühes Feedback." },
+        { "step": "05", "title": "Store-Release", "description": "Einreichung im App Store und Play Store inklusive Store-Assets." }
+      ]
+    },
+    {
+      "id": "seo-geo",
+      "badge": "Bereich 04",
+      "title": "SEO und GEO",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-seo-geo",
+      "services": [
+        "Technisches SEO: Core Web Vitals, Indexierung, Crawling",
+        "Keyword- und Wettbewerbsrecherche",
+        "On-Page-Optimierung: Seitenstruktur, Meta-Tags, interne Verlinkung",
+        "Strukturierte Daten (Schema.org) für Rich Results",
+        "Lokales SEO: Google Business Profile und konsistente Standortdaten",
+        "GEO: Inhalte und Quellen für Antworten in KI-Suchsystemen aufbereiten",
+        "Monitoring und Reporting über Search Console und Rankings"
+      ],
+      "process": [
+        { "step": "01", "title": "Audit", "description": "Technische Analyse: Crawling, Indexierung und Core Web Vitals." },
+        { "step": "02", "title": "Analyse", "description": "Keyword- und Wettbewerbsrecherche entlang der Suchintentionen." },
+        { "step": "03", "title": "Umsetzung", "description": "Technisches SEO, Inhalte, Metadaten und strukturierte Daten." },
+        { "step": "04", "title": "Monitoring", "description": "Rankings, Search Console und Sichtbarkeit in KI-Antworten im Blick." }
+      ]
+    }
     ]
   },
   "portfolio_section": {
@@ -284,7 +269,14 @@
     "interestMobileApp": "Mobile App",
     "interestGeneral": "Allgemeine Anfrage",
     "serviceLabel": "Leistungen wählen",
-    "packageLabel": "Oder ein Website-Paket auswählen"
+    "packageLabel": "Oder ein Website-Paket auswählen",
+    "serviceOptions": [
+      "Entwicklung als Erweiterung deines Teams",
+      "Design zu Code",
+      "Individuelle Softwareentwicklung von Grund auf",
+      "Feature-Entwicklung & Integrationen",
+      "Website und App Redesign"
+    ]
   },
   "price_packages_section": {
     "title": "Website-Pakete",

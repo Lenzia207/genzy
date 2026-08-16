@@ -12,8 +12,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-jakarta)', 'sans-serif'],
-                mono: ['var(--font-space-mono)', 'monospace'],
+                sans: ['var(--font-manrope)', 'sans-serif'],
+                mono: ['var(--font-space-grotesk)', 'sans-serif'],
             },
         },
     },

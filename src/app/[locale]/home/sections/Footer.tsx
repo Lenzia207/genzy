@@ -7,18 +7,18 @@ export default function Footer({locale}: {locale: string}) {
     const privacy = getLocalizedPath(locale, 'privacy');
 
     return (
-        <footer className="py-12 pb-28 md:pb-14 text-center text-sm" style={{ borderTop: "1px solid var(--border)", color: "var(--text-muted)" }}>
-             <div className="flex flex-col items-center gap-6">
-                <p className="font-prompt font-bold text-lg" style={{ color: "var(--text-secondary)" }}>Vision<span className="text-gradient-logo-IT">IT</span></p>
+        <footer className="section-lime py-8 pb-28 md:pb-8 text-sm">
+            <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-between gap-6">
+                <p className="font-mono font-bold text-lg" style={{ color: "var(--teal)" }}>Vision<span className="text-gradient-logo-IT">IT</span></p>
                 <div className="flex gap-8">
-                    <Link href={imprint.path as string} locale={locale} className="transition-colors hover:opacity-80" style={{ color: "var(--text-secondary)" }}>
+                    <Link href={imprint.path as string} locale={locale} className="transition-opacity hover:opacity-70" style={{ color: "var(--teal)" }}>
                         {imprint.text}
                     </Link>
-                    <Link href={privacy.path as string} locale={locale} className="transition-colors hover:opacity-80" style={{ color: "var(--text-secondary)" }}>
+                    <Link href={privacy.path as string} locale={locale} className="transition-opacity hover:opacity-70" style={{ color: "var(--teal)" }}>
                         {privacy.text}
                     </Link>
                 </div>
-                <p>&copy; 2026 VisionIT. All rights reserved.</p>
+                <p style={{ color: "var(--text-300)" }}>&copy; 2026 VisionIT. All rights reserved.</p>
             </div>
         </footer>
     );

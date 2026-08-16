@@ -21,7 +21,7 @@ export default function Checkbox({
             <label
                 htmlFor="privacy-policy"
                 className="text-sm cursor-pointer"
-                style={{ color: "var(--accent-purpley)" }}
+                style={{ color: "var(--text-secondary)" }}
             >
                 {message}
             </label>
