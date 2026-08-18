@@ -64,3 +64,28 @@ export const setItemActive = (data: HomePageData, setActiveSection: React.Dispat
     getActive();
     return () => window.removeEventListener("scroll", getActive);
 };
+
+/**
+ * Returns an onScroll handler that continuously rotates a value:
+ * clockwise while the user scrolls down, counter-clockwise while
+ * scrolling up. The rotation amount is proportional to the scroll
+ * delta, so faster scrolling spins it faster.
+ *
+ * @example
+ * useEffect(() => createScrollRotationHandler(setRotation), []);
+ */
+export const createScrollRotationHandler = (
+    setRotation: React.Dispatch<React.SetStateAction<number>>
+) => {
+    let lastY = window.scrollY;
+
+    const onScroll = () => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastY;
+        lastY = currentY;
+        setRotation((prev) => prev + delta * 1.1);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+};

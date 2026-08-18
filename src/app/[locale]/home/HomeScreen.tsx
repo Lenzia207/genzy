@@ -3,10 +3,12 @@ import AngebotSection from "./sections/AngebotSection/AngebotSection";
 import PricePackages from "./sections/PricePackages";
 import PortfolioSection from "./sections/PortfolioSection";
 import TechStackSection from "./sections/TechStackSection";
+import AboutMeInfo from "./sections/AboutMeInfo";
 import AboutMeSection from "./sections/AboutMeSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
 import { HomePageData } from "./sections/data/types/home-types";
 import TitleHeader from "@/components/TitleHeader";
+import TechStackBanner from "./sections/HeroSection/components/TechStackBanner";
 
 interface HomeScreenProps {
   data: HomePageData;
@@ -19,10 +21,17 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
       {/* Hero Section */}
       <HeroSection
         titleLine1={data.hero_section.title_line1}
-        description={data.hero_section.description}
-        btnText={data.hero_section.btn_text}
-        viewMore={data.hero_section.view_more}
-        stats={data.hero_section.stats}
+        subText={data.hero_section.sub_text}
+        stacks={data.tech_stack_section.stacks}
+      />
+
+      <TechStackBanner stacks={data.tech_stack_section.stacks} />
+
+      {/* About Me Info */}
+      <AboutMeInfo
+        subTitle={data.about_me_info_section.subTitle}
+        title={data.about_me_info_section.title}
+        description={data.about_me_info_section.description}
       />
 
       {/* Angebot Section */}
@@ -49,7 +58,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
       /> */}
 
       {/* Dashboard: Tech Stack + About Me */}
-      <section id="about" className="section-padding">
+      {/* <section id="about" className="section-padding">
         <TitleHeader title={data.about_me_section.title} tag="ÜBER MICH" />
         <div className="max-w-6xl mx-auto px-6">
           <div className="dashboard-layout">
@@ -66,7 +75,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact / Footer */}
       <ContactSection

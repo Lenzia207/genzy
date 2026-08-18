@@ -10,11 +10,7 @@
       "name": "Packages",
       "pageId": "#pricing"
     },
-    {
-      "page": "/",
-      "name": "Projects",
-      "pageId": "#projects"
-    },
+    
     {
       "page": "/",
       "name": "Contact",
@@ -23,6 +19,7 @@
   ],
   "hero_section": {
     "title_line1": "Custom Software Development for Your Vision.",
+    "sub_text": "for your vision",
     "description": "As a freelancer, I build websites and mobile apps that align with your requirements and suit your business.",
     "btn_text": "Get in Touch",
     "view_more": "View My Work",
@@ -234,6 +231,11 @@
         ]
       }
     ]
+  },
+  "about_me_info_section": {
+    "subTitle": "TECH · DESIGN · VISIBILITY",
+    "title": "Digital Solutions from a Single Source",
+    "description": "For several years, I have been designing and developing websites and digital applications. Since 2026 I have been working independently as a freelancer, combining my passion for technology with creativity. Thanks to my experience across different areas, I support projects with a broad understanding — from the initial consultation and concept through to implementation and the finished digital product. Straightforward, precise, and all from a single source.\n\nThrough my practical agency experience in software development, media design, and search engine optimization, I don't want to limit myself to a single discipline, but rather combine these areas in a meaningful way. It's exactly this interplay that makes my work exciting and enables solutions where technology, design, and visibility are considered together from the very start."
   },
   "about_me_section": {
     "title": "About Me",

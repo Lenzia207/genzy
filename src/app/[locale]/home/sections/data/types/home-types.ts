@@ -7,6 +7,7 @@ export interface HomePageData {
   angebot_section: AngebotSection;
   portfolio_section: PortfolioSection;
   tech_stack_section: TechStackSection;
+  about_me_info_section: AboutMeInfoSection;
   about_me_section: AboutMeSection;
   contact_section: ContactSection;
   price_packages_section: PricePackagesSection;
@@ -39,9 +40,7 @@ export interface HeroStat {
 
 export interface HeroSection {
   title_line1: string;
-  description: string;
-  btn_text: string;
-  view_more: string;
+  sub_text: string;
   stats: HeroStat[];
 }
 
@@ -92,6 +91,12 @@ export interface TechStackSection {
     category: string;
     items: string[];
   }[];
+}
+
+export interface AboutMeInfoSection {
+  subTitle: string;
+  title: string;
+  description: string;
 }
 
 export interface AboutMeSection {

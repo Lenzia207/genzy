@@ -416,12 +416,26 @@ h1, h2, h3, h4 {
 
 @keyframes hero-text-settle {
   0%   { transform: translateY(18vh) scale(1.22); font-size: 4rem; }
-  100% { transform: translateY(0) scale(1); font-size: 3rem; }
+  100% { transform: translateY(10vh) scale(1); font-size: 3rem; }
+}
+
+@media (max-width: 640px) {
+  @keyframes hero-text-settle {
+    0%   { transform: translateY(10vh) scale(1); font-size: 3rem; }
+    100% { transform: translateY(8vh) scale(.9); font-size: 2.7rem; }
+  }
 }
 
 @keyframes hero-portrait-reveal {
-  0%   { transform: translateY(30%) scale(0.6); clip-path: inset(0 0 0 0); }
-  100% { transform: translateY(10%) scale(.8);   clip-path: inset(0 0 0 0); }
+  0%   { transform: translateY(30%) scale(0.6);  }
+  100% { transform: translateY(10%) scale(.8);   }
+}
+
+@media (max-width: 640px) {
+  @keyframes hero-portrait-reveal {
+    0%   { transform: translateY(30%) scale(0.6);  }
+    100% { transform: translateY(20%) scale(.8);   }
+  }
 }
 
 @keyframes hero-deco-left-in {
@@ -430,7 +444,7 @@ h1, h2, h3, h4 {
 }
 
 @keyframes hero-deco-right-in {
-  0%   { transform: rotate(-45deg); }
+  0%   { transform: rotate(-48deg); }
   100% { transform: rotate(0deg); }
 }
 
@@ -449,21 +463,21 @@ h1, h2, h3, h4 {
 
 .hero-text-settle {
   transform-origin: top center;
-  animation: hero-text-settle 2s var(--ease-out-expo) 4s both;
+  animation: hero-text-settle 2s var(--ease-out-expo) 2s both;
 }
 
 .hero-portrait-reveal {
-  animation: hero-portrait-reveal 2s var(--ease-out-expo) 4s both;
+  animation: hero-portrait-reveal 2s var(--ease-out-expo) 2s both;
 }
 
 .hero-deco-left {
   transform-origin: top left;
-  animation: hero-deco-left-in 2s var(--ease-out-expo) 4s both;
+  animation: hero-deco-left-in 2s var(--ease-out-expo) 2s both;
 }
 
 .hero-deco-right {
   transform-origin: top right;
-  animation: hero-deco-right-in 2s var(--ease-out-expo) 4s both;
+  animation: hero-deco-right-in 2s var(--ease-out-expo) 2s both;
 }
 
 /* ─── Scroll Reveal ─────────────────────────────────────────────────── */
@@ -489,6 +503,43 @@ h1, h2, h3, h4 {
     transition-duration: 0.01ms !important;
   }
   .reveal-on-scroll { opacity: 1; transform: none; }
+}
+
+/* ─── Banner Tech Stack ───────────────────────────────────────────────────────── */
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ─── Typewriter ────────────────────────────────────────────────────── */
+
+@keyframes typewriter-blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.typewriter-caret {
+  display: inline-block;
+  margin-left: 2px;
+  animation: typewriter-blink 0.9s step-start infinite;
+}
+
+.typewriter-caret-static {
+  display: inline-block;
+  margin-left: 2px;
+  opacity: 0;
 }
 
 /* ─── Selection / Scrollbar ─────────────────────────────────────────── */

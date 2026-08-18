@@ -2,19 +2,15 @@
   "main_navigation": [
     {
       "page": "/",
+      "name": "Info",
+      "pageId": "#about-me"
+    },
+    {
+      "page": "/",
       "name": "Angebot",
       "pageId": "#services"
     },
-    {
-      "page": "/",
-      "name": "Pakete",
-      "pageId": "#pricing"
-    },
-    {
-      "page": "/",
-      "name": "Projekte",
-      "pageId": "#projects"
-    },
+
     {
       "page": "/",
       "name": "Kontakt",
@@ -22,15 +18,8 @@
     }
   ],
   "hero_section": {
-    "title_line1": "Individuelle Softwareentwicklung für deine Vision.",
-    "description": "Als Freelancer entwickle ich Websites und mobile Apps, die sich nach deinen Anforderungen richten und deinem Unternehmen entsprechen.",
-    "btn_text": "Kontakt aufnehmen",
-    "view_more": "Meine Referenzen",
-    "stats": [
-      { "value": 2, "suffix": "", "label": "Jahre Agenturerfahrung" },
-      { "value": 100000, "suffix": "+", "label": "Aktive Nutzer in betreuten Apps" },
-      { "value": 5, "suffix": "", "label": "Projekte im Portfolio" }
-    ]
+    "title_line1": "Softwareentwicklung | Mediengestaltung | Suchmaschinenoptimierung",
+    "sub_text": "für Deine Vision."
   },
   "angebot_section": {
     "title": "Mein Angebot im Überblick",
@@ -235,6 +224,11 @@
       }
     ]
   },
+  "about_me_info_section": {
+    "subTitle": "TECHNIK · DESIGN · SICHTBARKEIT",
+    "title": "Digitale Lösungen aus einer Hand",
+    "description": "Seit mehreren Jahren gestalte und entwickle ich Webseiten und digitale Anwendungen. Seit 2026 bin ich selbstständig als Freelancer tätig und verbinde dabei meine Leidenschaft für Technik mit Kreativität. Durch meine Erfahrung in unterschiedlichen Bereichen begleite ich Projekte mit einem breiten Verständnis – von der ersten Beratung und Konzeption bis hin zur Umsetzung und zum fertigen digitalen Produkt. Unkompliziert, präzise und alles aus einer Hand.\n\nDurch meine praktische Agenturerfahrung in Softwareentwicklung, Mediengestaltung und Suchmaschinenoptimierung möchte ich mich nicht auf eine einzelne Disziplin beschränken, sondern diese Bereiche sinnvoll miteinander verbinden. Genau dieses Zusammenspiel macht für mich den Reiz meiner Arbeit aus und ermöglicht Lösungen, bei denen Technik, Gestaltung und Sichtbarkeit von Anfang an zusammengedacht werden."
+  },
   "about_me_section": {
     "title": "Über mich",
     "name": "Lena Zyadeh, BSc.",
@@ -254,7 +248,7 @@
   },
   "contact_section": {
     "title": "Lass uns zusammenarbeiten.",
-    "description": "Lass uns deine Ideen zum Leben erwecken!\nSchreib mir gerne für ein kostenloses Gespräch. Egal ob online oder bei einem Kaffee vor Ort. Wir schauen gemeinsam, wie dein Projekt Gestalt annimmt und welche Schritte dich deinem Ziel näherbringen.",
+    "description": "Schreib mir gerne für ein unverbindliches Gespräch. Egal ob online oder bei einem Kaffee vor Ort. Wir schauen gemeinsam, wie dein Projekt Gestalt annimmt und welche Schritte dich deinem Ziel näherbringen.",
     "nameLabel": "Name*",
     "namePlaceholder": "Vollständiger Name",
     "companyLabel": "Firma",
