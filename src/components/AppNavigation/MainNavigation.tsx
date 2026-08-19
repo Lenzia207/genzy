@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 import { SwitchLanguage } from "../LanguageSwitcher";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 import { useEffect, useState, useCallback } from "react";
@@ -65,12 +66,13 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
           onClick={() => navigateToSection("top")}
           className="relative flex items-center justify-center w-9 h-9 shrink-0"
         >
-          <span
-            className="absolute inset-0"
-            style={{ background: "var(--lime)", transform: `rotate(${rotation}deg)`, transition: "transform 0.15s linear" }}
-            aria-hidden="true"
+          <Image
+            src="/images/logo-mark.svg"
+            alt=""
+            fill
+            className="object-contain"
+            // style={{ transform: `rotate(${rotation}deg)`, transition: "transform 0.15s linear" }}
           />
-          <span className="relative font-mono font-bold text-xs" style={{ color: "var(--teal)" }}>{`</>`}</span>
         </button>
 
         {data.main_navigation.slice(2).map((item, index) => {

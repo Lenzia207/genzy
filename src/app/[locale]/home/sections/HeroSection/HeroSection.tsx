@@ -12,7 +12,7 @@ export default function HeroSection({
   subText,
 }: HeroSectionProps) {
   return (
-    <section id="top" className="section-dark relative overflow-hidden min-h-screen">
+    <section id="top" className="section-dark relative overflow-hidden min-h-svh lg:min-h-screen flex flex-col justify-center lg:justify-start">
       <div className="hero-deco-left absolute bottom-0 left-0 w-[58vw] lg:w-[35vw] aspect-square pointer-events-none">
         <Image src="/images/hero-left.png" alt="" fill priority className="object-contain" />
       </div>
@@ -20,7 +20,7 @@ export default function HeroSection({
         <Image src="/images/hero-right.png" alt="" fill priority className="object-contain" />
       </div>
 
-      <div className="hero-text-settle text-lg relative z-10 flex flex-col items-center text-center px-6 pt-36 pb-14">
+      <div className="hero-text-settle text-lg relative z-10 flex flex-col items-center text-center px-6 pt-24 lg:pt-36 lg:pb-14">
         <h1 className="animate-enter font-mono uppercase" style={{  fontWeight: 700, letterSpacing: "0.06em", lineHeight: 1 }}>
           Lena Zyadeh
         </h1>
@@ -35,7 +35,7 @@ export default function HeroSection({
         </p>
       </div>
 
-      <div className="hero-portrait-reveal relative z-10 w-full max-w-[520px] mx-auto aspect-4/5 overflow-hidden">
+      <div className="hero-portrait-reveal relative z-10 lg:w-full w-svw max-w-[520px] mx-auto aspect-4/5 max-h-[40svh] lg:max-h-none overflow-hidden lg:flex-1">
         <Image
           src="/images/me_transparent.png"
           alt="Lena Zyadeh"
