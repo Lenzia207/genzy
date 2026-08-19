@@ -8,7 +8,13 @@
     {
       "page": "/",
       "name": "Angebot",
-      "pageId": "#services"
+      "pageId": "#services",
+      "submenu": [
+        { "name": "Agenturen", "pageId": "#agenturen" },
+        { "name": "Webseiten", "pageId": "#webseiten" },
+        { "name": "Mobile Apps", "pageId": "#mobile-apps" },
+        { "name": "SEO und GEO", "pageId": "#seo-geo" }
+      ]
     },
 
     {

@@ -26,10 +26,16 @@ export interface PricePackagesSection {
   packages: PricePackage[];
 }
 
+export interface MainNavigationSubItem {
+  name: string;
+  pageId: string;
+}
+
 export interface MainNavigation {
   name: string;
   page: string;
   pageId: string;
+  submenu?: MainNavigationSubItem[];
 }
 
 export interface HeroStat {

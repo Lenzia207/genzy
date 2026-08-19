@@ -13,7 +13,7 @@ export default function AngebotCard({ area, locale }: AngebotCardProps) {
   const [tab, setTab] = useState<"services" | "process">("services");
 
   return (
-    <div className="card-dark flex flex-col reveal-on-scroll">
+    <div id={area.id} className="card-dark flex flex-col reveal-on-scroll">
       <div className="p-6" style={{ background: "var(--teal)", color: "#FFFFFF" }}>
         <div className="label-mono mb-2" style={{ color: "var(--lime)" }}>{area.badge}</div>
         <h3 className="font-mono text-lg font-medium">{area.title}</h3>
@@ -23,7 +23,7 @@ export default function AngebotCard({ area, locale }: AngebotCardProps) {
         <button
           type="button"
           onClick={() => setTab("services")}
-          className="flex-1 py-2.5 font-mono text-[0.68rem] font-medium uppercase tracking-[0.1em] transition-colors cursor-pointer"
+          className="flex-1 py-2.5 font-mono text-[0.68rem] font-medium uppercase tracking-widest transition-colors cursor-pointer"
           style={{ background: tab === "services" ? "var(--lime)" : "var(--teal-2)", color: tab === "services" ? "var(--teal)" : "#9DB3B2" }}
         >
           {area.servicesLabel}
@@ -31,7 +31,7 @@ export default function AngebotCard({ area, locale }: AngebotCardProps) {
         <button
           type="button"
           onClick={() => setTab("process")}
-          className="flex-1 py-2.5 font-mono text-[0.68rem] font-medium uppercase tracking-[0.1em] transition-colors cursor-pointer"
+          className="flex-1 py-2.5 font-mono text-[0.68rem] font-medium uppercase tracking-widest transition-colors cursor-pointer"
           style={{ background: tab === "process" ? "var(--lime)" : "var(--teal-2)", color: tab === "process" ? "var(--teal)" : "#9DB3B2" }}
         >
           {area.processLabel}

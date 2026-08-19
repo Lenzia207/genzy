@@ -37,10 +37,10 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 grid grid-cols-[1fr_auto_1fr] items-center px-4 md:px-8 py-4 transition-all duration-300 ${scrolled ? "bg-white shadow-[0_4px_24px_rgba(2,70,75,0.1)]" : "bg-transparent"
+      className={`hidden sm:grid fixed top-0 left-0 w-full z-50 grid-cols-[1fr_auto_1fr] items-center px-4 md:px-8 py-4 transition-all duration-300 ${scrolled ? "bg-white shadow-[0_4px_24px_rgba(2,70,75,0.1)]" : "bg-transparent"
         }`}
     >
-      <div />
+      <div />   
 
       <div className="flex items-center justify-center gap-3 md:gap-8">
         {data.main_navigation.slice(0, 2).map((item, index) => {
@@ -51,7 +51,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
             <button
               key={index}
               type="button"
-              className="hidden sm:block font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors"
+              className=" font-mono text-xs font-medium uppercase tracking-[0.16em] transition-colors"
               style={{ color: isActive ? "var(--lime-hover)" : scrolled ? "var(--text-100)" : "#FFFFFF" }}
               onClick={() => navigateToSection(sectionId)}
             >
@@ -71,7 +71,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
             alt=""
             fill
             className="object-contain"
-            // style={{ transform: `rotate(${rotation}deg)`, transition: "transform 0.15s linear" }}
+          // style={{ transform: `rotate(${rotation}deg)`, transition: "transform 0.15s linear" }}
           />
         </button>
 
@@ -93,7 +93,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
         })}
       </div>
 
-      <div className="flex justify-end gap-3 md:gap-8">
+      <div className="flex justify-end">
         <SwitchLanguage />
       </div>
     </nav>

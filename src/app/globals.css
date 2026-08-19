@@ -421,8 +421,8 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   @keyframes hero-text-settle {
-    0%   { transform: translateY(10vh) scale(1); font-size: 2.6rem; }
-    100% { transform: translateY(8vh) scale(.9); font-size: 2.5rem; }
+    0%   { transform: translateY(10vh) scale(1.1); font-size: 2.6rem; }
+    100% { transform: translateY(0vh) scale(.9); font-size: 2.5rem; }
   }
 }
 
@@ -433,8 +433,8 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   @keyframes hero-portrait-reveal {
-    0%   { transform: translateY(45%) scale(0.6);  }
-    100% { transform: translateY(30%) scale(.8);   }
+    0%   { transform: translateY(40%) scale(0.6);  }
+    100% { transform: translateY(32%) scale(.8);   }
   }
 }
 

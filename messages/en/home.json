@@ -3,7 +3,13 @@
     {
       "page": "/",
       "name": "Services",
-      "pageId": "#services"
+      "pageId": "#services",
+      "submenu": [
+        { "name": "Agencies", "pageId": "#services" },
+        { "name": "Websites", "pageId": "#services" },
+        { "name": "Mobile Apps", "pageId": "#services" },
+        { "name": "SEO and GEO", "pageId": "#services" }
+      ]
     },
     {
       "page": "/",
