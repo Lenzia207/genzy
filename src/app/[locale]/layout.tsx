@@ -6,11 +6,17 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.vision-it.at/#organization",
+      "@type": "ProfessionalService",
+      "@id": "https://www.vision-it.at/#business",
       name: "VisionIT",
-      url: "https://www.vision-it.at",
+      alternateName: "VisionIT Wien",
+      url: "https://www.vision-it.at/",
       email: "office@vision-it.at",
+      sameAs: [
+        "https://www.linkedin.com/in/lena-z-230b01176",
+        "https://github.com/Lenzia207",
+      ],
+
       address: {
         "@type": "PostalAddress",
         streetAddress: "Zuckerkandlgasse 48/2",
@@ -18,17 +24,27 @@ const jsonLd = {
         postalCode: "1190",
         addressCountry: "AT",
       },
+
+      areaServed: {
+        "@type": "City",
+        name: "Wien",
+      },
+
       founder: {
         "@type": "Person",
         name: "Lena Zyadeh",
       },
     },
+
     {
       "@type": "WebSite",
       "@id": "https://www.vision-it.at/#website",
-      url: "https://www.vision-it.at",
+      url: "https://www.vision-it.at/",
       name: "VisionIT",
-      publisher: { "@id": "https://www.vision-it.at/#organization" },
+      alternateName: "VisionIT Wien",
+      publisher: {
+        "@id": "https://www.vision-it.at/#business",
+      },
       inLanguage: ["de", "en"],
     },
   ],

@@ -12,7 +12,9 @@ export function generateStaticParams() {
 
 const base = "https://www.vision-it.at";
 
-export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
   const canonical = `${base}/${locale}/`;
 
@@ -30,28 +32,32 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   if (locale === "en") {
     return {
       ...shared,
-      title: "VisionIT — Web Design & Web Development",
+      title: "VisionIT Vienna | Web Development, Apps, SEO & GEO",
       description:
-        "Custom web design and modern web development for small businesses and freelancers. Portfolio, pricing & contact.",
+        "VisionIT in Vienna – custom web development, mobile apps, SEO and GEO for businesses and freelancers. Personally developed by Lena Zyadeh",
       openGraph: {
-        title: "VisionIT — Web Design & Web Development",
+        title: "VisionIT Vienna | Web Development, Apps, SEO & GEO",
         description:
-          "Custom web design and modern web development for small businesses and freelancers.",
+          "VisionIT in Vienna – custom web development, mobile apps, SEO and GEO for businesses and freelancers. Personally developed by Lena Zyadeh",
         url: canonical,
+        siteName: "VisionIT",
+        type: "website",
       },
     };
   }
 
   return {
     ...shared,
-    title: "VisionIT — Webdesign & Webentwicklung",
+    title: "VisionIT Wien | Webentwicklung, Apps, SEO & GEO",
     description:
-      "Individuelles Webdesign und moderne Webentwicklung für kleine Unternehmen und Freelancer. Portfolio, Preise & Kontakt.",
+      "VisionIT in Wien – individuelle Webentwicklung, Mobile Apps, SEO & GEO für Unternehmen und Selbständige. Persönlich umgesetzt von Lena Zyadeh",
     openGraph: {
-      title: "VisionIT — Webdesign & Webentwicklung",
+      title: "VisionIT Wien | Webentwicklung, Apps, SEO & GEO",
       description:
-        "Individuelles Webdesign und moderne Webentwicklung für kleine Unternehmen und Freelancer.",
+        "VisionIT in Wien – individuelle Webentwicklung, Mobile Apps, SEO & GEO für Unternehmen und Selbständige. Persönlich umgesetzt von Lena Zyadeh.",
       url: canonical,
+      siteName: "VisionIT",
+      type: "website",
     },
   };
 }
