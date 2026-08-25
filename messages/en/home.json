@@ -2,21 +2,21 @@
   "main_navigation": [
     {
       "page": "/",
-      "name": "Services",
-      "pageId": "#services",
-      "submenu": [
-        { "name": "Agencies", "pageId": "#services" },
-        { "name": "Websites", "pageId": "#services" },
-        { "name": "Mobile Apps", "pageId": "#services" },
-        { "name": "SEO and GEO", "pageId": "#services" }
-      ]
+      "name": "Info",
+      "pageId": "#about-me"
     },
     {
       "page": "/",
-      "name": "Packages",
-      "pageId": "#pricing"
+      "name": "Services",
+      "pageId": "#services",
+      "submenu": [
+        { "name": "Agencies", "pageId": "#agenturen" },
+        { "name": "Websites", "pageId": "#webseiten" },
+        { "name": "Mobile Apps", "pageId": "#mobile-apps" },
+        { "name": "SEO and GEO", "pageId": "#seo-geo" }
+      ]
     },
-    
+
     {
       "page": "/",
       "name": "Contact",
@@ -24,20 +24,12 @@
     }
   ],
   "hero_section": {
-    "title_line1": "Custom Software Development for Your Vision.",
-    "sub_text": "for your vision",
-    "description": "As a freelancer, I build websites and mobile apps that align with your requirements and suit your business.",
-    "btn_text": "Get in Touch",
-    "view_more": "View My Work",
-    "stats": [
-      { "value": 2, "suffix": "", "label": "Years of Agency Experience" },
-      { "value": 100000, "suffix": "+", "label": "Active Users in Apps I've Worked On" },
-      { "value": 5, "suffix": "", "label": "Projects in Portfolio" }
-    ]
+    "title_line1": "Software Development | Media Design | Search Engine Optimization",
+    "sub_text": "for your vision."
   },
   "angebot_section": {
-    "title": "A Quick Overview of My Services",
-    "description": "Good development starts before the first line of code. With my tech stack, I build digital products with thoughtful concepts, clean architecture, and maintainable code that stands the test of time. For each area you can see the services and the matching project process.",
+    "title": "My Services at a Glance",
+    "description": "Good development starts before the first line of code. With my tech stack, I build digital products with thoughtful concepts, clean architecture, and maintainable code that stays extensible in the long run. For each area you can see the services and the matching project process.",
     "areas": [
     {
       "id": "agenturen",
@@ -131,16 +123,16 @@
     ]
   },
   "portfolio_section": {
-    "title": "Selected Work",
-    "description": "A selection of digital projects — from independently conceived and built websites to apps with hundreds of thousands of users, developed as part of an agency team.",
+    "title": "Projects",
+    "description": "A selection of my digital work – from independently conceived and developed websites to apps with hundreds of thousands of users, on which I collaborated as part of a development team.",
     "categories": [
       "Web",
       "App"
     ],
     "projects": [
       {
-        "title": "Institut for Electrochemistry, Galvanic and Materialchemistry",
-        "description": "A state-authorized civil engineering institute specializing in chemistry, corrosion, and surface engineering. The project covered concept, design, and full implementation — front-end development through to deployment — with a focus on a structured, professional presentation that reflects the institute's technical expertise.",
+        "title": "Institute for Electrochemistry, Electroplating and Materials Chemistry",
+        "description": "A state-authorized civil engineering institute specializing in chemistry, corrosion, and surface engineering. The project covered concept, design, and full implementation – from front-end development to deployment – with a focus on a clear, professional presence that reflects the institute's technical expertise.",
         "category": "Web",
         "image": "/images/portfolio/web-egm.png",
         "url": "https://elektrochemie.eu/",
@@ -153,7 +145,7 @@
       },
       {
         "title": "Camp Currie",
-        "description": "A website for a non-profit agricultural initiative. Full project from concept and design to deployment — with a focus on a welcoming, clearly structured design that communicates the project's values.",
+        "description": "Website for a non-profit agricultural project. Full implementation from concept and design to deployment – with a focus on a welcoming, clearly structured presence that conveys the project's values.",
         "category": "Web",
         "image": "/images/portfolio/web-camp-currie.png",
         "url": "https://camp-currie.at/",
@@ -167,8 +159,8 @@
       },
       {
         "title": "Pictolog PDF",
-        "description": "An independently conceived, designed, and developed offline app for project management and report creation. All data is stored locally on-device. Users can document progress visually and in writing, and export reports directly as PDFs.",
         "category": "App",
+        "description": "An independently conceived, designed, and developed offline app for project management and report creation. All data is stored locally. Users can document progress and export reports directly as PDFs.",
         "image": "/images/portfolio/pictolog.jpg",
         "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
         "tags": [
@@ -178,7 +170,7 @@
       },
       {
         "title": "Aktionsfinder App and PWA",
-        "description": "Austria's leading platform for leaflets, promotions, and offers. As part of the development team at Marqably, I contributed continuously to the app and PWA — bug fixes, feature implementations, and design updates in a live, scaled codebase.",
+        "description": "Austria's leading platform for leaflets and offers. As part of the development team at Marqably, I continuously contributed to the app and PWA – bug fixes, feature implementations, and design updates in a live, scaled codebase.",
         "category": "App",
         "image": "/images/portfolio/aktionsfinder.jpg",
         "url": "https://marqably.com/case-study/aktionsfinder-app",
@@ -193,7 +185,7 @@
       },
       {
         "title": "Tiroler Tageszeitung App",
-        "description": "A news app with hundreds of thousands of active users. Ongoing development as part of the team at Marqably — bug fixes, feature enhancements, Dark Mode implementation, and continuous design updates.",
+        "description": "News app with hundreds of thousands of active users. Ongoing development as part of the team at Marqably – with a focus on bug fixes, feature enhancements, Dark Mode, and continuous design updates.",
         "category": "App",
         "image": "/images/portfolio/tt.jpg",
         "url": "https://marqably.com/case-study/tt-app",
@@ -209,7 +201,7 @@
     ]
   },
   "tech_stack_section": {
-    "title": "Tech Stack",
+    "title": "Technologies and Frameworks",
     "stacks": [
       {
         "category": "Frontend & Web",
@@ -241,12 +233,12 @@
   "about_me_info_section": {
     "subTitle": "TECH · DESIGN · VISIBILITY",
     "title": "Digital Solutions from a Single Source",
-    "description": "For several years, I have been designing and developing websites and digital applications. Since 2026 I have been working independently as a freelancer, combining my passion for technology with creativity. Thanks to my experience across different areas, I support projects with a broad understanding — from the initial consultation and concept through to implementation and the finished digital product. Straightforward, precise, and all from a single source.\n\nThrough my practical agency experience in software development, media design, and search engine optimization, I don't want to limit myself to a single discipline, but rather combine these areas in a meaningful way. It's exactly this interplay that makes my work exciting and enables solutions where technology, design, and visibility are considered together from the very start."
+    "description": "For several years, I have been designing and developing websites and digital applications. Since 2026, I have been working independently as a freelancer, combining my passion for technology with creativity. VisionIT is my sole proprietorship for web development, mobile apps, SEO, and digital solutions based in Vienna. Thanks to my experience across different areas, I support projects with a broad understanding. Straightforward, precise, and all from a single source.\n\nThrough my practical agency experience in software development, media design, and search engine optimization, I don't want to limit myself to a single discipline, but rather combine these areas in a meaningful way. It's exactly this interplay that makes my work exciting and enables solutions where technology, design, and visibility are considered together from the very start."
   },
   "about_me_section": {
     "title": "About Me",
     "name": "Lena Zyadeh, BSc.",
-    "description": "I am a freelance web and app developer specializing in React, Next.js, and Flutter.\n\nI started my career at Marqably, a digital agency in Vienna, where I spent two years building and maintaining several digital products — including apps with hundreds of thousands of active users. That experience shaped the standards I hold my work to: clean code, proper documentation, and a working style that doesn't need hand-holding.\n\nNow working independently, I take on projects where both sides matter — a strong sense for design, and the technical depth to execute it properly.",
+    "description": "I am a freelance web and app developer specializing in React, Next.js, and Flutter.\n\nI started my career at Marqably, a digital agency in Vienna, where I spent two years contributing to several digital products – including apps with hundreds of thousands of active users. This experience shaped my standards for code quality, documentation, and independent working style.\n\nToday I work as a freelance developer on projects where both matter: a good sense for design and the technical depth to implement it properly.",
     "social_media": [
       {
         "name": "Github",
@@ -262,7 +254,7 @@
   },
   "contact_section": {
     "title": "Let's work together.",
-    "description": "Let's bring your ideas to life!\nFeel free to reach out for a free conversation — online or over a coffee in Vienna. We'll figure out together how your project takes shape and what steps get you closer to your goal.",
+    "description": "Feel free to reach out for a no-obligation conversation. Whether online or over a coffee in person. We'll figure out together how your project takes shape and which steps bring you closer to your goal.",
     "nameLabel": "Name*",
     "namePlaceholder": "Your full name",
     "companyLabel": "Company",
@@ -293,10 +285,10 @@
       {
         "name": "Starter",
         "price": "from €800",
-        "for": "For: Solo entrepreneurs, small service providers",
+        "for": "Ideal for: solo entrepreneurs, small service providers",
         "features": [
           "Landing page or up to 5 pages",
-          "Webdesign included",
+          "Web design included",
           "Contact form included",
           "Mobile-optimized (Responsive Design)",
           "Basic SEO (meta tags, page structure)",
@@ -306,7 +298,7 @@
       {
         "name": "Business",
         "price": "from €1,800",
-        "for": "For: Established businesses, regulated professions (doctors, lawyers, restaurants etc.)",
+        "for": "Ideal for: established businesses, regulated professions (doctors, lawyers, restaurants etc.)",
         "features": [
           "Up to 10 pages",
           "Appointment calendar / Booking system",
@@ -319,7 +311,7 @@
       {
         "name": "Premium / Webshop",
         "price": "from €5,000",
-        "for": "For: E-commerce, startups, complex requirements",
+        "for": "Ideal for: e-commerce, startups, complex requirements",
         "features": [
           "Custom webshop or web app",
           "Custom features & integrations",

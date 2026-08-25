@@ -16,7 +16,7 @@
             },
             {
                 "name": "contactPerson",
-                "label": "Contact Person",
+                "label": "Contact Person*",
                 "required": true
             },
             {
