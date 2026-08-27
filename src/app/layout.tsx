@@ -43,15 +43,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+   const { locale } = await params;
   return (
     // suppressHydrationWarning: the locale layout sets lang via a client
     // component after hydration; suppress the mismatch warning on <html>.
-    <html className="scroll-smooth" suppressHydrationWarning>
+    <html className="scroll-smooth" lang={locale} suppressHydrationWarning>
       <body
         className={`${manrope.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
