@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import Script from "next/script";
 import { HtmlLang } from "@/components/HtmlLang";
+import { Manrope, Space_Grotesk } from "next/font/google";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -50,11 +51,24 @@ const jsonLd = {
   ],
 };
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+  weight: ["400", "500", "700"],
+});
+
 export async function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
 }
-
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
@@ -64,15 +78,20 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   return (
-    <>
-      {/* Set the correct lang attribute on <html> per locale */}
-      <HtmlLang locale={locale} />
-      <Script
-        id="json-ld-org"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <NextIntlClientProvider>{children}</NextIntlClientProvider>
-    </>
+    <html lang={locale} className="scroll-smooth">
+      <body
+        className={`${manrope.variable} ${spaceGrotesk.variable} font-sans antialiased`}
+      >
+        <Script
+          id="json-ld-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
+        <NextIntlClientProvider>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
