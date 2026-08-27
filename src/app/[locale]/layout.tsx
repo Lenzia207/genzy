@@ -67,6 +67,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.vision-it.at"),
   title: {
     default: "VisionIT",
     template: "%s | VisionIT",

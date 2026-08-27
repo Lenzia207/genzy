@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import TitleHeader from "@/components/TitleHeader";
-
-export const metadata: Metadata = {
-  title: "Datenschutzerklärung — VisionIT",
-  description: "Informationen zur Datenverarbeitung, Cookies und Kontaktmöglichkeiten.",
-};
 
 export default function PrivacyDE() {
   return (
@@ -13,7 +7,7 @@ export default function PrivacyDE() {
       <BackgroundEffect />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-24 md:pt-32 pb-16 max-w-4xl">
-        <TitleHeader title="Datenschutzerklärung" />
+        <TitleHeader as="h1" title="Datenschutzerklärung" />
 
         <div className="space-y-6 text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-(--text-300)">
           <p>

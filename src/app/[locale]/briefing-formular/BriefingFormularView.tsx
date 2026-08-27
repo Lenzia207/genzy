@@ -92,7 +92,7 @@ export default function BriefingFormularView({
 
     return (
         <div className="max-w-3xl mx-auto px-4 py-28 space-y-8">
-            <TitleHeader title={data.title} description={data.description} />
+            <TitleHeader as="h1" title={data.title} description={data.description} />
 
             <form onSubmit={onSubmit} className="space-y-6">
 

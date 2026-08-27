@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
 import AngebotDetailView from "../angebot/AngebotDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
@@ -7,6 +8,56 @@ export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
+}
+
+const base = "https://www.vision-it.at";
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = (await params).locale || "de";
+  const canonical = `${base}/${locale}/angebot-mobile-apps/`;
+
+  const shared = {
+    alternates: {
+      canonical,
+      languages: {
+        de: `${base}/de/angebot-mobile-apps/`,
+        en: `${base}/en/angebot-mobile-apps/`,
+        "x-default": `${base}/de/angebot-mobile-apps/`,
+      },
+    },
+  };
+
+  if (locale === "en") {
+    return {
+      ...shared,
+      title: "Mobile App Development Vienna",
+      description:
+        "Custom mobile apps for iOS and Android, built from concept to launch. By VisionIT, Vienna.",
+      openGraph: {
+        title: "Mobile App Development Vienna | VisionIT",
+        description:
+          "Custom mobile apps for iOS and Android, built from concept to launch.",
+        url: canonical,
+        siteName: "VisionIT",
+        type: "website",
+      },
+    };
+  }
+
+  return {
+    ...shared,
+    title: "Mobile App Entwicklung Wien",
+    description:
+      "Individuelle Mobile Apps für iOS und Android – von der Konzeption bis zum Launch. Von VisionIT, Wien.",
+    openGraph: {
+      title: "Mobile App Entwicklung Wien | VisionIT",
+      description:
+        "Individuelle Mobile Apps für iOS und Android – von der Konzeption bis zum Launch.",
+      url: canonical,
+      siteName: "VisionIT",
+      type: "website",
+    },
+  };
 }
 
 export default async function AngebotMobileAppsPage(props: LocaleParams) {

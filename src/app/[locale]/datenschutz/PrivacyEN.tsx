@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import TitleHeader from "@/components/TitleHeader";
-
-export const metadata: Metadata = {
-  title: "Privacy Policy — VisionIT",
-  description: "How we process data, cookies and contact options.",
-};
 
 export default function PrivacyEN() {
   return (
@@ -13,7 +7,7 @@ export default function PrivacyEN() {
       <BackgroundEffect />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-24 md:pt-32 pb-16 max-w-4xl">
-        <TitleHeader title="Privacy Policy" />
+        <TitleHeader as="h1" title="Privacy Policy" />
 
         <div className="space-y-6 text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-(--text-300)">
           <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Data Controller</h3>

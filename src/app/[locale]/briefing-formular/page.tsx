@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
   if (locale === "en") {
     return {
       ...shared,
-      title: "Project Brief — Request a Quote | VisionIT",
+      title: "Project Brief — Request a Quote",
       description:
         "Describe your project goals, scope and budget — get a tailored proposal from VisionIT.",
     };
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
 
   return {
     ...shared,
-    title: "Briefing-Formular — Projekt anfragen | VisionIT",
+    title: "Briefing-Formular — Projekt anfragen",
     description:
       "Beschreibe kurz Ziel, Umfang und Budget deines Webprojekts — wir melden uns mit einem Vorschlag.",
   };

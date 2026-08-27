@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import TitleHeader from "@/components/TitleHeader";
-
-export const metadata: Metadata = {
-  title: "Imprint — VisionIT",
-  description: "Legal notice and contact details for VisionIT.",
-};
 
 export default function ImprintDE() {
   return (
@@ -15,7 +9,7 @@ export default function ImprintDE() {
       {/* Content Container */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-24 md:pt-32 pb-16 max-w-4xl">
         {/* Header */}
-        <TitleHeader title="Imprint" />
+        <TitleHeader as="h1" title="Imprint" />
 
         {/* Imprint Details */}
           <div className="space-y-6 text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-(--text-300)">
