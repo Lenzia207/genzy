@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.vision-it.at';
+  const baseUrl = 'https://vision-it.at';
   const lastModified = new Date();
 
   return [

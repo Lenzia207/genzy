@@ -4,27 +4,28 @@ import HomeScreen from "./home/HomeScreen";
 import fetchHomePageData from "./home/sections/data/home-page-data";
 
 import PageWrapper from "@/components/PageWrapper";
+import { baseUrl } from "../configs/configs";
 export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
 }
 
-const base = "https://www.vision-it.at";
+
 
 export async function generateMetadata({
   params,
 }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${base}/${locale}/`;
+  const canonical = `${baseUrl}/${locale}/`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${base}/de/`,
-        en: `${base}/en/`,
-        "x-default": `${base}/de/`,
+        de: `${baseUrl}/de/`,
+        en: `${baseUrl}/en/`,
+        "x-default": `${baseUrl}/de/`,
       },
     },
   };

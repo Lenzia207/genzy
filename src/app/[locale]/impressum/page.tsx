@@ -3,6 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 import ImprintDE from "./ImprintDE";
 import ImprintEN from "./ImprintEN";
 import { LocaleParams } from "@/app/i18n/local-params";
+import { baseUrl } from "@/app/configs/configs";
 
 
 export const dynamic = "force-static";
@@ -11,19 +12,19 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
 }
 
-const base = "https://www.vision-it.at";
+
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${base}/${locale}/impressum/`;
+  const canonical = `${baseUrl}/${locale}/impressum/`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${base}/de/impressum/`,
-        en: `${base}/en/impressum/`,
-        "x-default": `${base}/de/impressum/`,
+        de: `${baseUrl}/de/impressum/`,
+        en: `${baseUrl}/en/impressum/`,
+        "x-default": `${baseUrl}/de/impressum/`,
       },
     },
   };

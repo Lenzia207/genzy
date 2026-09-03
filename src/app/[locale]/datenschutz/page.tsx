@@ -3,6 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 import PrivacyDE from "./PrivacyDE";
 import PrivacyEN from "./PrivacyEN";
 import { LocaleParams } from "@/app/i18n/local-params";
+import { baseUrl } from "@/app/configs/configs";
 
 export const dynamic = "force-static";
 
@@ -10,19 +11,19 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
 }
 
-const base = "https://www.vision-it.at";
+
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${base}/${locale}/datenschutz/`;
+  const canonical = `${baseUrl}/${locale}/datenschutz/`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${base}/de/datenschutz/`,
-        en: `${base}/en/datenschutz/`,
-        "x-default": `${base}/de/datenschutz/`,
+        de: `${baseUrl}/de/datenschutz/`,
+        en: `${baseUrl}/en/datenschutz/`,
+        "x-default": `${baseUrl}/de/datenschutz/`,
       },
     },
   };

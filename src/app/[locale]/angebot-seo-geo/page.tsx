@@ -3,6 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 import AngebotDetailView from "../angebot/AngebotDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
+import { baseUrl } from "@/app/configs/configs";
 
 export const dynamic = "force-static";
 
@@ -10,19 +11,19 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
 }
 
-const base = "https://www.vision-it.at";
+
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${base}/${locale}/angebot-seo-geo/`;
+  const canonical = `${baseUrl}/${locale}/angebot-seo-geo/`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${base}/de/angebot-seo-geo/`,
-        en: `${base}/en/angebot-seo-geo/`,
-        "x-default": `${base}/de/angebot-seo-geo/`,
+        de: `${baseUrl}/de/angebot-seo-geo/`,
+        en: `${baseUrl}/en/angebot-seo-geo/`,
+        "x-default": `${baseUrl}/de/angebot-seo-geo/`,
       },
     },
   };

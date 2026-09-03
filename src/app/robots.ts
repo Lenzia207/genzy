@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://www.vision-it.at/sitemap.xml',
+    sitemap: 'https://vision-it.at/sitemap.xml',
   };
 }

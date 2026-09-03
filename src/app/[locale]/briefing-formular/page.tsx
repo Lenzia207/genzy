@@ -5,6 +5,7 @@ import { LocaleParams } from "@/app/i18n/local-params";
 import PageWrapper from "@/components/PageWrapper";
 import { fetchBriefingFormData } from "./data/home-page-data";
 import BriefingFormularScreen from "./BriefingFormularScreen";
+import { baseUrl } from "@/app/configs/configs";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
@@ -29,19 +30,18 @@ export default async function BriefingFormular(props: LocaleParams) {
   );
 }
 
-const base = "https://www.vision-it.at";
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${base}/${locale}/briefing-formular/`;
+  const canonical = `${baseUrl}/${locale}/briefing-formular/`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${base}/de/briefing-formular/`,
-        en: `${base}/en/briefing-formular/`,
-        "x-default": `${base}/de/briefing-formular/`,
+        de: `${baseUrl}/de/briefing-formular/`,
+        en: `${baseUrl}/en/briefing-formular/`,
+        "x-default": `${baseUrl}/de/briefing-formular/`,
       },
     },
   };
