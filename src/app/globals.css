@@ -327,6 +327,221 @@ h1, h2, h3, h4 {
   transform: translateY(-5px);
 }
 
+/* ─── Process Cards ─────────────────────────────────────────────────── */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border-top: 1px solid var(--border-faint);
+  border-bottom: 1px solid var(--border-faint);
+}
+
+@media (min-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.process-card {
+  position: relative;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border-faint);
+  border-right: none;
+  border-left: none;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  transition: background 0.4s var(--ease-out-expo), backdrop-filter 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+}
+
+.process-grid .process-card:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .process-card {
+    padding: 2rem 1.75rem;
+    border-right: 1px solid var(--border-faint);
+    border-bottom: none;
+  }
+
+  .process-grid .process-card:last-child {
+    border-right: none;
+  }
+}
+
+.process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.process-card:hover,
+.process-card.is-active {
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-4px);
+}
+
+.process-card:hover::before,
+.process-card.is-active::before {
+  transform: scaleX(1);
+}
+
+.process-card .process-step-label {
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-400);
+  transition: color 0.3s ease;
+}
+
+.process-card:hover .process-step-label,
+.process-card.is-active .process-step-label {
+  color: var(--lime);
+}
+
+.process-card .process-title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-100);
+  margin: 0.75rem 0 0.6rem;
+}
+
+@media (min-width: 768px) {
+  .process-card .process-title {
+    font-size: 1.25rem;
+  }
+}
+
+.process-card .process-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-300);
+}
+
+/* ─── Service Cards ─────────────────────────────────────────────────── */
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border-radius: 3px;
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-faint);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-out-expo), border-color 0.35s var(--ease-out-expo),
+    box-shadow 0.35s var(--ease-out-expo);
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, transparent 40%, var(--accent-purple-glow) 140%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.service-card:hover,
+.service-card.is-active {
+  border-color: var(--border-accent);
+  box-shadow: 0 20px 45px -24px rgba(2, 70, 75, 0.35);
+  transform: translateY(-6px);
+}
+
+.service-card:hover::after,
+.service-card.is-active::after {
+  opacity: 1;
+}
+
+.service-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(2, 70, 75, 0.18);
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover .service-card-icon,
+.service-card.is-active .service-card-icon {
+  background: var(--lime);
+  color: var(--teal);
+  box-shadow: 0 8px 18px -8px rgba(190, 230, 0, 0.55);
+  transform: translateY(-2px);
+}
+
+.service-card-title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-100);
+  margin-bottom: 0.6rem;
+}
+
+.service-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-300);
+}
+
+.service-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--teal);
+  text-decoration: none;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo),
+    max-height 0.3s var(--ease-out-expo), margin-top 0.3s var(--ease-out-expo);
+}
+
+.service-card-cta svg {
+  transition: transform 0.25s var(--ease-out-expo);
+}
+
+.service-card-cta:hover svg {
+  transform: translateX(3px);
+}
+
+.service-card:hover .service-card-cta,
+.service-card.is-active .service-card-cta {
+  max-height: 2.5rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ─── Text Gradients ────────────────────────────────────────────────── */
 
 .text-gradient-hero {

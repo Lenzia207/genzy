@@ -1,0 +1,41 @@
+{
+    "angebot_website_data": {
+        "title": "Professional Websites & Web Development in Vienna",
+        "description": "Let VisionIT build your website. We offer professional web development, web design and tailored solutions for your business in Vienna.",
+        "servicesTitle": "Our Services",
+        "servicesDescription": "Comprehensive solutions for your success.",
+        "ctaLabel": "Request an Offer",
+        "services": [
+            {
+                "icon": "building-2",
+                "title": "Corporate Website Development",
+                "description": "Professional corporate websites with modern design that build trust and present your brand perfectly."
+            },
+            {
+                "icon": "code-2",
+                "title": "Feature Development & Integrations",
+                "description": "Optimization of business processes and user experience. Custom web development with individual features and integrations."
+            },
+            {
+                "icon": "shopping-cart",
+                "title": "Online Shop Development",
+                "description": "E-commerce solutions with WooCommerce or Shopify. Powerful online shops with secure payment systems."
+            },
+            {
+                "icon": "zap",
+                "title": "Landing Page Development",
+                "description": "Conversion-optimized landing pages for campaigns, product launches and lead generation."
+            },
+            {
+                "icon": "sparkles",
+                "title": "Website Relaunch",
+                "description": "Modernize your existing website — new design, better performance, up-to-date technologies and improved SEO."
+            },
+            {
+                "icon": "shield",
+                "title": "Custom Web Development",
+                "description": "Tailored web applications for complex business processes. Next.js, React, API integration."
+            }
+        ]
+    }
+}

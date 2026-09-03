@@ -1,0 +1,41 @@
+{
+    "angebot_website_data": {
+        "title": "Professionelle Websites & Webentwicklung in Wien",
+        "description": "Lasse deine Website von VisionIT entwickeln. Wir bieten professionelle Webentwicklung, Webdesign und maßgeschneiderte Lösungen für dein Unternehmen in Wien.",
+        "servicesTitle": "Unsere Leistungen",
+        "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
+        "ctaLabel": "Angebot anfordern",
+        "services": [
+            {
+                "icon": "building-2",
+                "title": "Firmenwebsite erstellen lassen",
+                "description": "Professionelle Unternehmenswebsite mit modernem Design, die Vertrauen schafft und Ihre Marke optimal präsentiert."
+            },
+            {
+                "icon": "code-2",
+                "title": "Feature-Entwicklung & Integrationen",
+                "description": "Optimierung von Geschäftsprozessen und Benutzererfahrung. Maßgeschneiderte Webentwicklung mit individuellen Funktionen und Integrationen."
+            },
+            {
+                "icon": "shopping-cart",
+                "title": "Webshop erstellen lassen",
+                "description": "E-Commerce-Lösungen mit WooCommerce oder Shopify. Leistungsstarke Online-Shops mit sicheren Zahlungssystemen."
+            },
+            {
+                "icon": "zap",
+                "title": "Landing Page erstellen lassen",
+                "description": "Conversion-optimierte Landingpages für Kampagnen, Produktlaunches und Lead-Generierung."
+            },
+            {
+                "icon": "sparkles",
+                "title": "Website Relaunch",
+                "description": "Bestehende Website modernisieren — neues Design, bessere Performance, aktuellste Technologien und verbesserte SEO."
+            },
+            {
+                "icon": "shield",
+                "title": "Custom Web-Entwicklung",
+                "description": "Maßgeschneiderte Webanwendungen für komplexe Geschäftsprozesse. Next.js, React, API-Integration."
+            }
+        ]
+    }
+}

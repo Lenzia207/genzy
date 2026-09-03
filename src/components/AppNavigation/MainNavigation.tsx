@@ -93,9 +93,9 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
         })}
       </div>
 
-      <div className="flex justify-end">
+      {/* <div className="flex justify-end">
         <SwitchLanguage />
-      </div>
+      </div> */}
     </nav>
   );
 }

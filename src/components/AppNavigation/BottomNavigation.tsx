@@ -105,7 +105,7 @@ export default function BottomNavigation({ data, locale }: BottomNavigationProps
           >
             <Image src="/images/logo-mark.svg" alt="" fill className="object-contain" />
           </button>
-          <SwitchLanguage />
+          {/* <SwitchLanguage /> */}
         </div>
 
         {/* Right: Burger button */}

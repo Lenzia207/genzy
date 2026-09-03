@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import AngebotDetailView from "../angebot/AngebotDetailView";
+import AngebotDetailView from "./AngebotDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { baseUrl } from "@/app/configs/configs";
+import fetchWebsitePageData from "./data/website-page-data";
 
 export const dynamic = "force-static";
 
@@ -46,13 +47,13 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
 
   return {
     ...shared,
-    title: "Webseiten Entwicklung Wien",
+    title: "Website erstellen lassen in Wien | Webentwicklung mit VisionIT",
     description:
-      "Individuelle Webseiten mit moderner Webentwicklung für kleine Unternehmen und Freelancer. Von VisionIT, Wien.",
+      "Individuelle Websites für Unternehmen und Selbstständige – von Konzeption und Design bis Entwicklung, SEO und Launch.",
     openGraph: {
-      title: "Webseiten Entwicklung Wien | VisionIT",
+      title: "Website erstellen lassen in Wien | Webentwicklung mit VisionIT",
       description:
-        "Individuelle Webseiten mit moderner Webentwicklung für kleine Unternehmen und Freelancer.",
+        "Individuelle Websites für Unternehmen und Selbstständige – von Konzeption und Design bis Entwicklung, SEO und Launch.",
       url: canonical,
       siteName: "VisionIT",
       type: "website",
@@ -64,11 +65,14 @@ export default async function AngebotWebseitenPage(props: LocaleParams) {
   const { locale } = await props.params;
   const data = await fetchHomePageData(locale);
   const area = data.angebot_section.areas.find((a) => a.id === "webseiten")!;
+  const websiteData = await fetchWebsitePageData(locale);
 
   return (
     <PageWrapper
       locale={locale}
-      pageContent={<AngebotDetailView area={area} locale={locale} />}
+      pageContent={<AngebotDetailView websitePage={websiteData} area={area} locale={locale} />}
     />
   );
 }
+
+

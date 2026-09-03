@@ -271,11 +271,12 @@
     "serviceLabel": "Select services",
     "packageLabel": "Or select a website package",
     "serviceOptions": [
-      "Development as an extension of your team",
-      "Design to code",
-      "Custom software development from scratch",
-      "Feature development & integrations",
-      "Website and app redesign"
+      "Corporate Website Development",
+      "Feature Development & Integrations",
+      "Online Shop Development",
+      "Landing Page Development",
+      "Website Relaunch",
+      "Custom Web Development"
     ]
   },
   "price_packages_section": {

@@ -61,10 +61,12 @@
       "linkLabel": "Mehr Infos",
       "link": "angebot-webseiten",
       "services": [
-        "Design zu Code",
-        "Individuelle Softwareentwicklung von Grund auf",
+        "Firmenwebsite erstellen lassen",
         "Feature-Entwicklung & Integrationen",
-        "Website Redesign"
+        "Webshop erstellen lassen",
+        "Landing Page erstellen lassen",
+        "Website Relaunch",
+        "Custom Web-Entwicklung"
       ],
       "process": [
         { "step": "01", "title": "Anfrage", "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget." },
@@ -271,11 +273,12 @@
     "serviceLabel": "Leistungen wählen",
     "packageLabel": "Oder ein Website-Paket auswählen",
     "serviceOptions": [
-      "Entwicklung als Erweiterung deines Teams",
-      "Design zu Code",
-      "Individuelle Softwareentwicklung von Grund auf",
+      "Firmenwebsite erstellen lassen",
       "Feature-Entwicklung & Integrationen",
-      "Website und App Redesign"
+      "Webshop erstellen lassen",
+      "Landing Page erstellen lassen",
+      "Website Relaunch",
+      "Custom Web-Entwicklung"
     ]
   },
   "price_packages_section": {
