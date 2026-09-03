@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
     config.resolve.alias["@messages"] = path.resolve(__dirname, "messages");
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/de/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
