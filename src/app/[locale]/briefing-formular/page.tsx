@@ -5,7 +5,7 @@ import { LocaleParams } from "@/app/i18n/local-params";
 import PageWrapper from "@/components/PageWrapper";
 import { fetchBriefingFormData } from "./data/home-page-data";
 import BriefingFormularScreen from "./BriefingFormularScreen";
-import { baseUrl } from "@/app/configs/configs";
+import { baseUrl, briefingFormularUrl } from "@/app/configs/configs";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
@@ -33,15 +33,15 @@ export default async function BriefingFormular(props: LocaleParams) {
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${baseUrl}/${locale}/briefing-formular/`;
+  const canonical = `${baseUrl}/${locale}${briefingFormularUrl}`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${baseUrl}/de/briefing-formular/`,
-        en: `${baseUrl}/en/briefing-formular/`,
-        "x-default": `${baseUrl}/de/briefing-formular/`,
+        de: `${baseUrl}/de${briefingFormularUrl}`,
+        en: `${baseUrl}/en${briefingFormularUrl}`,
+        "x-default": `${baseUrl}/de${briefingFormularUrl}`,
       },
     },
   };

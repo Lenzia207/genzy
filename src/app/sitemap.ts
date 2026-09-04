@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
+import { agenturenDetailUrl, baseUrl, briefingFormularUrl, mobileAppDetailUrl, seoGeoDetailUrl, websiteDetailUrl } from './configs/configs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://vision-it.at';
   const lastModified = new Date();
 
   return [
@@ -78,122 +78,122 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
-      url: `${baseUrl}/de/briefing-formular/`,
+      url: `${baseUrl}/de${briefingFormularUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/briefing-formular/`,
-          en: `${baseUrl}/en/briefing-formular/`,
+          de: `${baseUrl}/de${briefingFormularUrl}`,
+          en: `${baseUrl}/en${briefingFormularUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/en/briefing-formular/`,
+      url: `${baseUrl}/en${briefingFormularUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/briefing-formular/`,
-          en: `${baseUrl}/en/briefing-formular/`,
+          de: `${baseUrl}/de${briefingFormularUrl}`,
+          en: `${baseUrl}/en${briefingFormularUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/de/angebot-seo-geo/`,
+      url: `${baseUrl}/de${seoGeoDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-seo-geo/`,
-          en: `${baseUrl}/en/angebot-seo-geo/`,
+          de: `${baseUrl}/de${seoGeoDetailUrl}`,
+          en: `${baseUrl}/en${seoGeoDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/en/angebot-seo-geo/`,
+      url: `${baseUrl}/en${seoGeoDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-seo-geo/`,
-          en: `${baseUrl}/en/angebot-seo-geo/`,
+          de: `${baseUrl}/de${seoGeoDetailUrl}`,
+          en: `${baseUrl}/en${seoGeoDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/de/angebot-mobile-apps/`,
+      url: `${baseUrl}/de${mobileAppDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-mobile-apps/`,
-          en: `${baseUrl}/en/angebot-mobile-apps/`,
+          de: `${baseUrl}/de${mobileAppDetailUrl}`,
+          en: `${baseUrl}/en${mobileAppDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/en/angebot-mobile-apps/`,
+      url: `${baseUrl}/en${mobileAppDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-mobile-apps/`,
-          en: `${baseUrl}/en/angebot-mobile-apps/`,
+          de: `${baseUrl}/de${mobileAppDetailUrl}`,
+          en: `${baseUrl}/en${mobileAppDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/de/angebot-agenturen/`,
+      url: `${baseUrl}/de${agenturenDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-agenturen/`,
-          en: `${baseUrl}/en/angebot-agenturen/`,
+          de: `${baseUrl}/de${agenturenDetailUrl}`,
+          en: `${baseUrl}/en${agenturenDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/en/angebot-agenturen/`,
+      url: `${baseUrl}/en${agenturenDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-agenturen/`,
-          en: `${baseUrl}/en/angebot-agenturen/`,
+          de: `${baseUrl}/de${agenturenDetailUrl}`,
+          en: `${baseUrl}/en${agenturenDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/de/angebot-webseiten/`,
+      url: `${baseUrl}/de${websiteDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-webseiten/`,
-          en: `${baseUrl}/en/angebot-webseiten/`,
+          de: `${baseUrl}/de${websiteDetailUrl}`,
+          en: `${baseUrl}/en${websiteDetailUrl}`,
         },
       },
     },
     {
-      url: `${baseUrl}/en/angebot-webseiten/`,
+      url: `${baseUrl}/en${websiteDetailUrl}`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
         languages: {
-          de: `${baseUrl}/de/angebot-webseiten/`,
-          en: `${baseUrl}/en/angebot-webseiten/`,
+          de: `${baseUrl}/de${websiteDetailUrl}`,
+          en: `${baseUrl}/en${websiteDetailUrl}`,
         },
       },
     },

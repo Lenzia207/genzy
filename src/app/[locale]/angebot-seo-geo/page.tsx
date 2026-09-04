@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import AngebotDetailView from "../angebot-webseiten/WebsiteDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
-import { baseUrl } from "@/app/configs/configs";
+import { baseUrl, seoGeoDetailUrl } from "@/app/configs/configs";
 import SeoGeoDetailView from "./SeoGeoDetailView";
 import fetchSeoGeoPageData from "./data/seo-geo-page-data";
 
@@ -17,15 +16,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${baseUrl}/${locale}/angebot-seo-geo/`;
+  const canonical = `${baseUrl}/${locale}${seoGeoDetailUrl}`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${baseUrl}/de/angebot-seo-geo/`,
-        en: `${baseUrl}/en/angebot-seo-geo/`,
-        "x-default": `${baseUrl}/de/angebot-seo-geo/`,
+        de: `${baseUrl}/de${seoGeoDetailUrl}`,
+        en: `${baseUrl}/en${seoGeoDetailUrl}`,
+        "x-default": `${baseUrl}/de${seoGeoDetailUrl}`,
       },
     },
   };

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import AngebotDetailView from "../angebot-webseiten/WebsiteDetailView";
+import AngebotDetailView from "..${websiteDetailUrl}WebsiteDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
-import { baseUrl } from "@/app/configs/configs";
+import { baseUrl, mobileAppDetailUrl } from "@/app/configs/configs";
 
 export const dynamic = "force-static";
 
@@ -15,15 +15,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${baseUrl}/${locale}/angebot-mobile-apps/`;
+  const canonical = `${baseUrl}/${locale}${mobileAppDetailUrl}`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${baseUrl}/de/angebot-mobile-apps/`,
-        en: `${baseUrl}/en/angebot-mobile-apps/`,
-        "x-default": `${baseUrl}/de/angebot-mobile-apps/`,
+        de: `${baseUrl}/de${mobileAppDetailUrl}`,
+        en: `${baseUrl}/en${mobileAppDetailUrl}`,
+        "x-default": `${baseUrl}/de${mobileAppDetailUrl}`,
       },
     },
   };

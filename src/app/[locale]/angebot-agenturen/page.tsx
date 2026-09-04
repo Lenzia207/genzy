@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import AngebotDetailView from "../angebot-webseiten/WebsiteDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
-import { baseUrl } from "@/app/configs/configs";
+import { agenturenDetailUrl, baseUrl } from "@/app/configs/configs";
 
 export const dynamic = "force-static";
 
@@ -15,15 +14,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${baseUrl}/${locale}/angebot-agenturen/`;
+  const canonical = `${baseUrl}/${locale}${agenturenDetailUrl}`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${baseUrl}/de/angebot-agenturen/`,
-        en: `${baseUrl}/en/angebot-agenturen/`,
-        "x-default": `${baseUrl}/de/angebot-agenturen/`,
+        de: `${baseUrl}/de${agenturenDetailUrl}`,
+        en: `${baseUrl}/en${agenturenDetailUrl}`,
+        "x-default": `${baseUrl}/de${agenturenDetailUrl}`,
       },
     },
   };

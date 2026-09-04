@@ -3,7 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 import AngebotDetailView from "./WebsiteDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
-import { baseUrl } from "@/app/configs/configs";
+import { baseUrl, websiteDetailUrl } from "@/app/configs/configs";
 import fetchWebsitePageData from "./data/website-page-data";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = (await params).locale || "de";
-  const canonical = `${baseUrl}/${locale}/angebot-webseiten/`;
+  const canonical = `${baseUrl}/${locale}${websiteDetailUrl}`;
 
   const shared = {
     alternates: {
       canonical,
       languages: {
-        de: `${baseUrl}/de/angebot-webseiten/`,
-        en: `${baseUrl}/en/angebot-webseiten/`,
-        "x-default": `${baseUrl}/de/angebot-webseiten/`,
+        de: `${baseUrl}/de${websiteDetailUrl}`,
+        en: `${baseUrl}/en${websiteDetailUrl}`,
+        "x-default": `${baseUrl}/de${websiteDetailUrl}`,
       },
     },
   };
