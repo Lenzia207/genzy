@@ -1,9 +1,9 @@
-import { Link } from "@/app/i18n/routing";
+
 import TitleHeader from "@/components/TitleHeader";
-import { AngebotProcessStep } from "../home/sections/data/types/home-types";
+import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
 
 
-interface AngebotDetailUIProps {
+interface AgenturenDetailUIProps {
   badge: string;
   title: string;
   description: string;
@@ -16,8 +16,8 @@ interface AngebotDetailUIProps {
   locale: string;
 }
 
-export default function SeoGeoDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
- process, locale }: AngebotDetailUIProps) {
+export default function AgenturenDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
+ process, locale }: AgenturenDetailUIProps) {
   return (
     <>
       <section className="section-dark relative section-padding" style={{ paddingTop: "8rem" }}>

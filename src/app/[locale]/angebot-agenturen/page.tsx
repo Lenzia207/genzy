@@ -3,6 +3,8 @@ import PageWrapper from "@/components/PageWrapper";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { agenturenDetailUrl, baseUrl } from "@/app/configs/configs";
+import AgenturenDetailView from "./screen/AgenturenDetailView";
+import { fetchAgenturenPageData } from "./data/agenturen-page-data";
 
 export const dynamic = "force-static";
 
@@ -64,11 +66,12 @@ export default async function AngebotAgenturenPage(props: LocaleParams) {
   const { locale } = await props.params;
   const data = await fetchHomePageData(locale);
   const area = data.angebot_section.areas.find((a) => a.id === "agenturen")!;
+  const agenturenPageData = await fetchAgenturenPageData(locale);
 
   return (
     <PageWrapper
       locale={locale}
-      pageContent={<AngebotDetailView area={area} locale={locale} />}
+      pageContent={<AgenturenDetailView agenturenPage={agenturenPageData} area={area} locale={locale} />}
     />
   );
 }

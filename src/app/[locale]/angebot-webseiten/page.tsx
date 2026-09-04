@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import AngebotDetailView from "./WebsiteDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { baseUrl, websiteDetailUrl } from "@/app/configs/configs";
 import fetchWebsitePageData from "./data/website-page-data";
+import WebsiteDetailView from "./screen/WebsiteDetailView";
 
 export const dynamic = "force-static";
 
@@ -70,7 +70,7 @@ export default async function AngebotWebseitenPage(props: LocaleParams) {
   return (
     <PageWrapper
       locale={locale}
-      pageContent={<AngebotDetailView websitePage={websiteData} area={area} locale={locale} />}
+      pageContent={<WebsiteDetailView websitePage={websiteData} area={area} locale={locale} />}
     />
   );
 }

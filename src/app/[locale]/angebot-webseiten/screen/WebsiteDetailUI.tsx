@@ -1,9 +1,9 @@
-import { Link } from "@/app/i18n/routing";
 import TitleHeader from "@/components/TitleHeader";
-import { AngebotProcessStep } from "../home/sections/data/types/home-types";
-import { AngebotWebsiteService } from "./data/website-dev-types";
-import WebsiteProcessSection from "./component/WebsiteProcessSection";
-import WebsiteServiceSection from "./component/WebsiteServiceSection";
+import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
+import WebsiteProcessSection from "../component/WebsiteProcessSection";
+import WebsiteServiceSection from "../component/WebsiteServiceSection";
+import { AngebotWebsiteService } from "../data/website-dev-types";
+
 
 interface WebsiteDetailUIProps {
   badge: string;

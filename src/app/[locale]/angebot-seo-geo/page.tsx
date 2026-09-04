@@ -3,8 +3,8 @@ import PageWrapper from "@/components/PageWrapper";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { baseUrl, seoGeoDetailUrl } from "@/app/configs/configs";
-import SeoGeoDetailView from "./SeoGeoDetailView";
 import fetchSeoGeoPageData from "./data/seo-geo-page-data";
+import SeoGeoDetailView from "./screen/SeoGeoDetailView";
 
 export const dynamic = "force-static";
 

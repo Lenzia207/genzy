@@ -1,0 +1,31 @@
+{
+    "angebot_mobile_apps_data": {
+        "title": "Deine eigene Mobile App in Wien",
+        "description": "Wir bieten professionelle Mobile App-Entwicklung, um die Sichtbarkeit Ihres Unternehmens in Wien zu erhöhen. Optimieren Sie Ihre App für iOS und Android.",
+        "servicesTitle": "Unsere Leistungen",
+        "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
+        "ctaLabel": "Angebot anfordern",
+        "services": [
+            {
+                "icon": "building-2",
+                "title": "Individuelle Softwareentwicklung von Grund auf",
+                "description": "Entwicklung maßgeschneiderter Mobile Apps von Grund auf, um die Leistung und Sichtbarkeit Ihres Unternehmens in Wien zu erhöhen. Wir kümmern uns um iOS- und Android-Optimierung."
+            },
+            {
+                "icon": "code-2",
+                "title": "Feature-Entwicklung & Integrationen",
+                "description": "Entwicklung und Integration von Funktionen, um die Leistung und Sichtbarkeit Ihrer Mobile App zu erhöhen und gezielten Traffic zu generieren."
+            },
+            {
+                "icon": "shopping-cart",
+                "title": "Design zu Code",
+                "description": "Umsetzung von Designvorlagen in funktionierenden Code, um die Benutzererfahrung zu verbessern und die Leistung Ihrer Mobile App zu optimieren."
+            },
+            {
+                "icon": "zap",
+                "title": "App Redesign",
+                "description": "Überarbeitung und Verbesserung des Designs Ihrer Mobile App, um die Benutzererfahrung zu optimieren und die Leistung Ihrer App zu steigern."
+            }
+        ]
+    }
+}

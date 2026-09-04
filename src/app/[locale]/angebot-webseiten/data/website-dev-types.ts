@@ -1,4 +1,3 @@
-import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
 
 export interface AngebotWebsiteService {
   icon: string;

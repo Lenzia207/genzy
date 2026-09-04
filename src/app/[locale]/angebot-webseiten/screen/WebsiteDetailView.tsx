@@ -1,5 +1,6 @@
-import { AngebotWebsiteData } from "./data/website-dev-types";
-import { AngebotArea } from "../home/sections/data/types/home-types";
+
+import { AngebotArea } from "../../home/sections/data/types/home-types";
+import { AngebotWebsiteData } from "../data/website-dev-types";
 import AngebotDetailUI from "./WebsiteDetailUI";
 
 

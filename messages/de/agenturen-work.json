@@ -1,0 +1,31 @@
+{
+    "angebot_agenturen_data": {
+        "title": "Zusammenarbeit mit Agenturen Worldwide",
+        "description": "Wir bieten professionelle Webentwicklung, Webdesign und maßgeschneiderte Lösungen für Agenturen weltweit. Lassen Sie uns gemeinsam Ihre Projekte umsetzen.",
+        "servicesTitle": "Unsere Leistungen",
+        "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
+        "ctaLabel": "Angebot anfordern",
+        "services": [
+            {
+                "icon": "building-2",
+                "title": "Entwicklung als Erweiterung deines Teams",
+                "description": "Entwicklung maßgeschneiderter Weblösungen von Grund auf, um die Leistung und Sichtbarkeit Ihres Unternehmens weltweit zu erhöhen. Wir kümmern uns um iOS- und Android-Optimierung."
+            },
+            {
+                "icon": "code-2",
+                "title": "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
+                "description": "Entwicklung und Integration von Funktionen, um die Leistung und Sichtbarkeit Ihrer Weblösungen zu erhöhen und gezielten Traffic zu generieren."
+            },
+            {
+                "icon": "shopping-cart",
+                "title": "Feature-Entwicklung & Integrationen in laufenden Projekten",
+                "description": "Umsetzung von Designvorlagen in funktionierenden Code, um die Benutzererfahrung zu verbessern und die Leistung Ihrer Weblösungen zu optimieren."
+            },
+            {
+                "icon": "zap",
+                "title":  "Sauberer, dokumentierter Pull Request und termintreue Übergabe",
+                "description": "Überarbeitung und Verbesserung des Designs Ihrer Weblösungen, um die Benutzererfahrung zu optimieren und die Leistung Ihrer Weblösungen zu steigern."
+            }
+        ]
+    }
+}

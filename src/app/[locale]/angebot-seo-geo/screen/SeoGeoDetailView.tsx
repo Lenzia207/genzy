@@ -1,15 +1,16 @@
-import { AngebotArea } from "../home/sections/data/types/home-types";
-import { AngebotSeoGeoData } from "./data/seo-geo-types";
+
+import { AngebotArea } from "../../home/sections/data/types/home-types";
+import { AngebotSeoGeoData } from "../data/seo-geo-types";
 import SeoGeoDetailUI from "./SeoGeoDetailUI";
 
 
-interface AngebotDetailViewProps {
+interface SeoGeoDetailViewProps {
   seoGeoPage: AngebotSeoGeoData;
   area: AngebotArea;
   locale: string;
 }
 
-export default function SeoGeoDetailView({ seoGeoPage, area, locale }: AngebotDetailViewProps) {
+export default function SeoGeoDetailView({ seoGeoPage, area, locale }: SeoGeoDetailViewProps) {
   return (
     <SeoGeoDetailUI  
       badge={area.badge}
