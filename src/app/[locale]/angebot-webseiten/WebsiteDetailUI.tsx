@@ -5,7 +5,7 @@ import { AngebotWebsiteService } from "./data/website-dev-types";
 import WebsiteProcessSection from "./component/WebsiteProcessSection";
 import WebsiteServiceSection from "./component/WebsiteServiceSection";
 
-interface AngebotDetailUIProps {
+interface WebsiteDetailUIProps {
   badge: string;
   title: string;
   description: string;
@@ -18,7 +18,7 @@ interface AngebotDetailUIProps {
   locale: string;
 }
 
-export default function AngebotDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, services, process, locale }: AngebotDetailUIProps) {
+export default function WebsiteDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, services, process, locale }: WebsiteDetailUIProps) {
   return (
     <>
       <section className="section-dark relative section-padding" style={{ paddingTop: "8rem" }}>

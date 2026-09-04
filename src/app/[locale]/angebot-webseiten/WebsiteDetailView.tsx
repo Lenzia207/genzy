@@ -1,15 +1,15 @@
 import { AngebotWebsiteData } from "./data/website-dev-types";
 import { AngebotArea } from "../home/sections/data/types/home-types";
-import AngebotDetailUI from "./AngebotDetailUI";
+import AngebotDetailUI from "./WebsiteDetailUI";
 
 
-interface AngebotDetailViewProps {
+interface WebsiteDetailViewProps {
   websitePage: AngebotWebsiteData;
   area: AngebotArea;
   locale: string;
 }
 
-export default function AngebotDetailView({ websitePage, area, locale }: AngebotDetailViewProps) {
+export default function WebsiteDetailView({ websitePage, area, locale }: WebsiteDetailViewProps) {
   return (
     <AngebotDetailUI  
       badge={area.badge}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import AngebotDetailView from "./AngebotDetailView";
+import AngebotDetailView from "./WebsiteDetailView";
 import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { baseUrl } from "@/app/configs/configs";
