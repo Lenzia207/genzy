@@ -1,0 +1,41 @@
+{
+    "angebot_seo_geo_data": {
+        "title": "SEO und GEO in Wien",
+        "description": "Wir bieten professionelle SEO- und GEO-Dienstleistungen, um die Sichtbarkeit Ihres Unternehmens in Wien zu erhöhen. Optimieren Sie Ihre Website für Suchmaschinen und lokale Suchanfragen.",
+        "servicesTitle": "Unsere Leistungen",
+        "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
+        "ctaLabel": "Angebot anfordern",
+        "services": [
+            {
+                "icon": "building-2",
+                "title": "Technisches SEO: Core Web Vitals, Indexierung, Crawling",
+                "description": "Optimierung der technischen Aspekte Ihrer Website, um die Leistung und Sichtbarkeit in Suchmaschinen zu verbessern. Wir kümmern uns um Core Web Vitals, Indexierung und Crawling."
+            },
+            {
+                "icon": "code-2",
+                "title": "Keyword- und Wettbewerbsrecherche",
+                "description": "Analyse und Optimierung von Keywords sowie Wettbewerbsrecherche, um die Sichtbarkeit Ihrer Website in Suchmaschinen zu erhöhen und gezielten Traffic zu generieren."
+            },
+            {
+                "icon": "shopping-cart",
+                "title": "On-Page-Optimierung: Seitenstruktur, Meta-Tags, interne Verlinkung",
+                "description": "Optimierung der Inhalte und Struktur Ihrer Website, um die Relevanz für Suchmaschinen zu erhöhen und die Benutzererfahrung zu verbessern. Wir kümmern uns um Seitenstruktur, Meta-Tags und interne Verlinkung."
+            },
+            {
+                "icon": "zap",
+                "title": "Strukturierte Daten (Schema.org) für Rich Results",
+                "description": "Implementierung strukturierter Daten nach Schema.org, um Rich Results in den Suchergebnissen zu erzielen und die Sichtbarkeit Ihrer Website zu erhöhen."
+            },
+            {
+                "icon": "sparkles",
+                "title": "Lokales SEO: Google Business Profile und konsistente Standortdaten",
+                "description": "Optimierung Ihres Google Business Profils und Sicherstellung konsistenter Standortdaten, um die lokale Sichtbarkeit Ihres Unternehmens zu erhöhen und mehr Kunden in Ihrer Region zu erreichen."
+            },
+            {
+                "icon": "shield",
+                "title": "GEO: Inhalte und Quellen für Antworten in KI-Suchsystemen aufbereiten",
+                "description": "Aufbereitung von Inhalten und Quellen, um Antworten in KI-Suchsystemen zu optimieren und die Sichtbarkeit Ihres Unternehmens in diesen Systemen zu erhöhen."
+            }
+        ]
+    }
+}
